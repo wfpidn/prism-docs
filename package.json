@@ -1,0 +1,23 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "PRISM documentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx docsify serve ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfpidn/PRISM-docs.git"
+  },
+  "author": "muhammad hafidz m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wfpidn/PRISM-docs/issues"
+  },
+  "homepage": "https://github.com/wfpidn/PRISM-docs#readme",
+  "dependencies": {
+    "docsify-cli": "^4.4.1"
+  }
+}
