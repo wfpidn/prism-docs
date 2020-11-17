@@ -8,4 +8,4 @@ The tool can be used to understand the evolving nature of slow onset but medium 
 
 This is the single-source of documentation for PRISM. It is intended to be a thorough, living document detailing the background, objective, data, method and output of PRISM. If you find a mistake, please open an issue.
 
-![PRISM](../img/prism.png)
+![PRISM](/img/prism.png)
