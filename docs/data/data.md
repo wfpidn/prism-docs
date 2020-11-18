@@ -4,16 +4,16 @@ PRISM hosts an extensive set of data related to climate, temperature, vegetation
 
 Learn more about PRISM's commitment to high quality and open data.
 
-## Data Standards
+### Data Standards
 
 PRISM is committed to providing highest quality and latest available data on the impact of climate hazards on the most vulnerable communities. All data available have been verified and classified with respect to its quality, timeliness, accuracy, completeness, geographic coverage and objectivity. In some cases, the best available data are still imperfect. In those cases, we will add a notification on the fallacies.
 
-## Open Data Policy
+### Open Data Policy
 
 PRISM is committed to provide an open, downloadable and useful data. We believe that open data amplify rapid improvement in innovation, information sharing, analysis and transparency which are important to support [SDG 2](https://www.wfp.org/zero-hunger). For datasets retrieved from other sources, please refer to the original sources accordingly.
 
 
-## Data Sharing
+### Data Sharing
 
 TERM OF USE
 
