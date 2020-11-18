@@ -19,6 +19,19 @@
 	* [Overview](/product/product.md)
 	* Rainfall anomaly
 	* Standardized Precipitation Index
+	* Dry Spell
+	* Wet Spell
+	* NDVI anomaly
+	* LST anomaly
+	* Vegetation Health Index
+	* Country-specific product
 * **Methodology**
+	* Hazard mapping
+	* Impact analysis
+	* Country-specific feature
+* **How to setup your own PRISM**
+	* [Overview](/setup/howto.md)
+	* [Backend](/setup/backend.md)
+	* [Frontend](/setup/frontend.md)
 * **API**
 	* [Overview](/api.md)
