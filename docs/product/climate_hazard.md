@@ -2,13 +2,13 @@
 
 Mapping the extent of a natural hazard (e.g., assessing areas with a high risk) or disaster is a first step in disaster risk management and emergency response. Subsequently, exposure mapping enables the estimation of the impact of hazards or disasters, for example, regarding the number of affected inhabitants or infrastructure. 
 
-This section describes in detail the methodology and analysis operations required to meet the user requirements of WFP at country or regional level. This is based on extensive search from related journal for impact calculation during the disaster and availability global free data on internet. The following practice shows the use of GIS software (ArcGIS or other GIS Open Source Software) to analyze a disaster extent map in combination with auxiliary data such as population or land cover data.
+This section describes in detail the methodology and analysis operations required to meet the user requirements of WFP at country or regional level. This is based on extensive search from related journal for impact calculation during the disaster and availability global free data on internet. 
 
 ## Rainfall anomaly
 
 The objective of rainfall anomaly is to evaluate the quality of monthly rainfall over the country. This is achieved through analysis of anomalies, i.e. a comparison against a reference. The classic reference is the long-term average. 
 
-Rainfall anomaly is generated for a 10-day period. The model will calculate the accumulated rainfall and other climate indices of precipitation based on that data during the most recent dekad which has been aggregated from pentad estimates. Every month has three dekads, such that the first two dekads have 10 days (i.e., 1-10, 11-20), and the third is comprised of the remaining days of the month (21-28 or 21-29 or 21-30 or 21-31. Therefore, the length of the third dekad of each month is not consistent and varies from 8-11 days, depending on the length of the month.
+Rainfall anomaly is generated based on dekad data. The model will calculate the accumulated rainfall and other climate indices of precipitation based on that data during the most recent dekad which has been aggregated from pentad estimates. Every month has three dekads, such that the first two dekads have 10 days (i.e., 1-10, 11-20), and the third is comprised of the remaining days of the month (21-28 or 21-29 or 21-30 or 21-31. Therefore, the length of the third dekad of each month is not consistent and varies from 8-11 days, depending on the length of the month.
 
 The anomaly is calculated based on percentage of the average
 
@@ -16,19 +16,35 @@ Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
 
 where $x_i$ is current rainfall and $x_j$ is long-term average of rainfall.
 
+Rainfall anomaly derived from CHIRPS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | Displays dekad and monthly rainfall anomaly data  |
+| Variable  | Rainfall anomaly  |
+| Geographic coverage  | Global 50N-50S, 180W-180E |
+| Spatial resolution  | 0.05 degree ~ 5.6 km at equator  |
+| Temporal resolution  | dekad, 1-month, 3-month, 6-month, 9-month and 12-month, rolling by dekad.  |
+| Format  | GeoTIFF  |
+| Unit  | Percent (%)  |
+
+#### Symbology
+
 ?> The threshold and the symbology for the rainfall anomaly can follow below colorcodes and image.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| <40%  | `#a16622` ![#a16622](https://via.placeholder.com/15/a16622/000000?text=+) | 161, 102, 34  |
-| 40-60%  | `#db9835` ![#db9835](https://via.placeholder.com/15/db9835/000000?text=+)  | 219, 152, 53  |
-| 60-80%  | `#eec883` ![#eec883](https://via.placeholder.com/15/eec883/000000?text=+)  | 238, 200, 131  |
-| 80-90%  | `#fcebb6` ![#fcebb6](https://via.placeholder.com/15/fcebb6/000000?text=+)  | 252, 235, 182  |
-| 90-110%  | `#ffffff` ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)  | 255, 255, 255  |
-| 110-120%  | `#caf8f9` ![#caf8f9](https://via.placeholder.com/15/caf8f9/000000?text=+)  | 202, 248, 249  |
-| 120-140%  | `#91e0ee` ![#91e0ee](https://via.placeholder.com/15/91e0ee/000000?text=+)  | 145, 224, 238  |
-| 140-180%  | `#50b7da` ![#50b7da](https://via.placeholder.com/15/50b7da/000000?text=+)  | 80, 183, 218  |
-| +180%  | `#3d78cf` ![#3d78cf](https://via.placeholder.com/15/3d78cf/000000?text=+)  | 61, 120, 207  |
+| 40% and below  | `#a16622` ![#a16622](https://via.placeholder.com/15/a16622/000000?text=+) | rgb(161, 102, 34)  |
+| 40 to 60%  | `#db9835` ![#db9835](https://via.placeholder.com/15/db9835/000000?text=+)  | rgb(219, 152, 53)  |
+| 60 to 80%  | `#eec883` ![#eec883](https://via.placeholder.com/15/eec883/000000?text=+)  | rgb(238, 200, 131)  |
+| 80 to 90%  | `#fcebb6` ![#fcebb6](https://via.placeholder.com/15/fcebb6/000000?text=+)  | rgb(252, 235, 182)  |
+| 90 to 110%  | `#ffffff` ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)  | rgb(255, 255, 255)  |
+| 110 to 120%  | `#caf8f9` ![#caf8f9](https://via.placeholder.com/15/caf8f9/000000?text=+)  | rgb(202, 248, 249)  |
+| 120 to 140%  | `#91e0ee` ![#91e0ee](https://via.placeholder.com/15/91e0ee/000000?text=+)  | rgb(145, 224, 238)  |
+| 140 to 180%  | `#50b7da` ![#50b7da](https://via.placeholder.com/15/50b7da/000000?text=+)  | rgb(80, 183, 218)  |
+| 180% and above  | `#3d78cf` ![#3d78cf](https://via.placeholder.com/15/3d78cf/000000?text=+)  | rgb(61, 120, 207)  |
 
 
 ## Standardized Precipitation Index
@@ -48,19 +64,75 @@ Negative SPI values represent rainfall deficit and less than median precipitatio
 
 Python packages [climate-indices](https://pypi.org/project/climate-indices/) developed by [U.S. Drought Portal](https://www.drought.gov/drought/python-climate-indices) used to calculate the index.
 
+SPI derived from CHIRPS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | Displays SPI-1, SPI-2, SPI-3, SPI-6, SPI-9, SPI-12 and SPI-24  |
+| Variable  | SPI  |
+| Geographic coverage  | Global 50N-50S, 180W-180E |
+| Spatial resolution  | 0.05 degree ~ 5.6 km at equator  |
+| Temporal resolution  | 1-month, 3-month, 6-month, 9-month, 12-month and 24-month, rolling by dekad.  |
+| Format  | GeoTIFF  |
+| Unit  | n/a  |
+
+#### Symbology
 
 ?> The threshold and the symbology for the SPI can follow below color codes and image.
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
-| Exceptionally Dry  | -2.00 and above  | `#760005` ![#760005](https://via.placeholder.com/15/760005/000000?text=+)  | 118, 0, 5  |
-| Extremely Dry  | -1.99 to -1.60  | `#ec0013` ![#ec0013](https://via.placeholder.com/15/ec0013/000000?text=+)  | 236, 0, 19  |
-| Severely Dry  | -1.59 to -1.30  | `#ffa938` ![#ffa938](https://via.placeholder.com/15/ffa938/000000?text=+)  | 255, 169, 56  |
-| Moderately Dry  | -1.29 to -0.80  | `#fdd28a` ![#fdd28a](https://via.placeholder.com/15/fdd28a/000000?text=+)  | 253, 210, 138  |
-| Abnormally Dry  | -0.79 to -0.51  | `#fefe53` ![#fefe53](https://via.placeholder.com/15/fefe53/000000?text=+)  | 254, 254, 83  |
-| Near Normal  | -0.50 to +0.50  | `#ffffff` ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)  | 255, 255, 255  |
-| Abnormally Moist  | +0.51 to +0.79  | `#a2fd6e` ![#a2fd6e](https://via.placeholder.com/15/a2fd6e/000000?text=+)  | 162, 253, 110  |
-| Moderately Moist  | +0.80 to +1.29  | `#00b44a` ![#00b44a](https://via.placeholder.com/15/00b44a/000000?text=+)  | 0, 180, 74  |
-| Very Moist  | +1.30 to +1.59  | `#008180` ![#008180](https://via.placeholder.com/15/008180/000000?text=+)  | 0, 129, 128  |
-| Extremely Moist  | +1.60 to +1.99  | `#2a23eb` ![#2a23eb](https://via.placeholder.com/15/2a23eb/000000?text=+)  | 42, 35, 235  |
-| Exceptionally Moist  | +2.00 and above  | `#a21fec` ![#a21fec](https://via.placeholder.com/15/a21fec/000000?text=+)  | 162, 31, 236  |
+| Exceptionally Dry  | -2.00 and below  | `#760005` ![#760005](https://via.placeholder.com/15/760005/000000?text=+)  | rgb(118, 0, 5)  |
+| Extremely Dry  | -1.99 to -1.60  | `#ec0013` ![#ec0013](https://via.placeholder.com/15/ec0013/000000?text=+)  | rgb(236, 0, 19)  |
+| Severely Dry  | -1.59 to -1.30  | `#ffa938` ![#ffa938](https://via.placeholder.com/15/ffa938/000000?text=+)  | rgb(255, 169, 56)  |
+| Moderately Dry  | -1.29 to -0.80  | `#fdd28a` ![#fdd28a](https://via.placeholder.com/15/fdd28a/000000?text=+)  | rgb(253, 210, 138)  |
+| Abnormally Dry  | -0.79 to -0.51  | `#fefe53` ![#fefe53](https://via.placeholder.com/15/fefe53/000000?text=+)  | rgb(254, 254, 83)  |
+| Near Normal  | -0.50 to +0.50  | `#ffffff` ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)  | rgb(255, 255, 255)  |
+| Abnormally Moist  | +0.51 to +0.79  | `#a2fd6e` ![#a2fd6e](https://via.placeholder.com/15/a2fd6e/000000?text=+)  | rgb(162, 253, 110)  |
+| Moderately Moist  | +0.80 to +1.29  | `#00b44a` ![#00b44a](https://via.placeholder.com/15/00b44a/000000?text=+)  | rgb(0, 180, 74)  |
+| Very Moist  | +1.30 to +1.59  | `#008180` ![#008180](https://via.placeholder.com/15/008180/000000?text=+)  | rgb(0, 129, 128)  |
+| Extremely Moist  | +1.60 to +1.99  | `#2a23eb` ![#2a23eb](https://via.placeholder.com/15/2a23eb/000000?text=+)  | rgb(42, 35, 235)  |
+| Exceptionally Moist  | +2.00 and above  | `#a21fec` ![#a21fec](https://via.placeholder.com/15/a21fec/000000?text=+)  | rgb(162, 31, 236)  |
+
+
+## NDVI anomaly
+
+The objective is to evaluate the monthly deviation of vegetation over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
+
+The anomaly is calculated based on percentage of the average
+
+Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
+
+where $x_i$ is current NDVI and $x_j$ is long-term average of NDVI.
+
+NDVI anomaly derived from MODIS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | Displays 16-days NDVI anomaly data  |
+| Variable  | NDVI anomaly  |
+| Geographic coverage  | Global  |
+| Spatial resolution  | 1 km at equator  |
+| Temporal resolution  | 16-days.  |
+| Format  | GeoTIFF  |
+| Unit  | Percent (%)  |
+
+#### Symbology
+
+?> The threshold and the symbology for the NDVI anomaly can follow below colorcodes and image.
+
+| Class  | Hex  | RGB  |
+|---|---|---|
+| 50% and below  | `#6a2b0e` ![#6a2b0e](https://via.placeholder.com/15/6a2b0e/000000?text=+) | rgb(106, 43, 14)  |
+| 50 to 70%  | `#e06c2c` ![#e06c2c](https://via.placeholder.com/15/e06c2c/000000?text=+)  | rgb(224, 108, 44)  |
+| 70 to 80%  | `#ebb049` ![#ebb049](https://via.placeholder.com/15/ebb049/000000?text=+)  | rgb(235, 176, 73)  |
+| 80 to 90%  | `#e5db9e` ![#e5db9e](https://via.placeholder.com/15/e5db9e/000000?text=+)  | rgb(229, 219, 158)  |
+| 90 to 110%  | `#ffffff` ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)  | rgb(255, 255, 255)  |
+| 110 to 120%  | `#d6fb57` ![#d6fb57](https://via.placeholder.com/15/d6fb57/000000?text=+)  | rgb(214, 251, 87)  |
+| 120 to 130%  | `#6fec48` ![#6fec48](https://via.placeholder.com/15/6fec48/000000?text=+)  | rgb(111, 236, 72)  |
+| 130 to 150%  | `#3f8b48` ![#3f8b48](https://via.placeholder.com/15/3f8b48/000000?text=+)  | rgb(63, 139, 39)  |
+| 150% and above  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
