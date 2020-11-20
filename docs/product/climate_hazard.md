@@ -4,7 +4,10 @@ Mapping the extent of a natural hazard (e.g., assessing areas with a high risk) 
 
 This section describes in detail the methodology and analysis operations required to meet the user requirements of WFP at country or regional level. This is based on extensive search from related journal for impact calculation during the disaster and availability global free data on internet. 
 
-## Rainfall anomaly
+
+
+
+## Rainfall (ratio) anomaly
 
 The objective of rainfall anomaly is to evaluate the quality of monthly rainfall over the country. This is achieved through analysis of anomalies, i.e. a comparison against a reference. The classic reference is the long-term average. 
 
@@ -45,6 +48,8 @@ Rainfall anomaly derived from CHIRPS data
 | 120 to 140%  | `#91e0ee` ![#91e0ee](https://via.placeholder.com/15/91e0ee/000000?text=+)  | rgb(145, 224, 238)  |
 | 140 to 180%  | `#50b7da` ![#50b7da](https://via.placeholder.com/15/50b7da/000000?text=+)  | rgb(80, 183, 218)  |
 | 180% and above  | `#3d78cf` ![#3d78cf](https://via.placeholder.com/15/3d78cf/000000?text=+)  | rgb(61, 120, 207)  |
+
+
 
 
 ## Standardized Precipitation Index
@@ -97,6 +102,83 @@ SPI derived from CHIRPS data
 | Exceptionally Moist  | +2.00 and above  | `#a21fec` ![#a21fec](https://via.placeholder.com/15/a21fec/000000?text=+)  | rgb(162, 31, 236)  |
 
 
+
+
+## LST (difference) anomaly
+
+The objective is to evaluate the monthly deviation of temperature over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
+
+The anomaly is calculated based on difference of the average.
+
+LST anomaly (°C) = $LST - LSTavg$
+
+where:
+- $LST$ is the current value of LST
+- $LSTavg$ is the long-term average value of LST.
+
+LST and LST long-term average derived from MODIS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | Displays 8-days LST anomaly data  |
+| Variable  | LST anomaly  |
+| Geographic coverage  | Global  |
+| Spatial resolution  | 1 km at equator  |
+| Temporal resolution  | 8-days.  |
+| Format  | GeoTIFF  |
+| Unit  | Degrees Celcius (°C)  |
+
+#### Symbology
+
+?> The threshold and the symbology for the `8-days` land surface temperature difference anomaly in degree celcius (°C) can follow below colorcodes and image.
+
+| Class  | Hex  | RGB  |
+|---|---|---|
+| -10 and below  | `#b2182b` ![#b2182b](https://via.placeholder.com/15/b2182b/000000?text=+) | rgb(178, 24, 43)  |
+| -10 to -5  | `#d6604d` ![#d6604d](https://via.placeholder.com/15/d6604d/000000?text=+)  | rgb(214, 96, 77)  |
+| -5 to -2  | `#f4a582` ![#f4a582](https://via.placeholder.com/15/f4a582/000000?text=+)  | rgb(244, 165, 130)  |
+| -2 to -1  | `#fddbc7` ![#fddbc7](https://via.placeholder.com/15/fddbc7/000000?text=+)  | rgb(253, 219, 199)  |
+| -1 to +1  | `#f7f7f7` ![#f7f7f7](https://via.placeholder.com/15/f7f7f7/000000?text=+)  | rgb(247, 247, 247)  |
+| +1 to +2  | `#d1e5f0` ![#d1e5f0](https://via.placeholder.com/15/d1e5f0/000000?text=+)  | rgb(209, 229, 240)  |
+| +2 to +5  | `#92c5de` ![#92c5de](https://via.placeholder.com/15/92c5de/000000?text=+)  | rgb(146, 197, 222)  |
+| +5 to +10  | `#4393c3` ![#4393c3](https://via.placeholder.com/15/4393c3/000000?text=+)  | rgb(67, 147, 195)  |
+| +10 and above  | `#2166ac` ![#2166ac](https://via.placeholder.com/15/2166ac/000000?text=+)  | rgb(33, 102, 172)  |
+
+
+
+
+## Temperature Condition Index
+
+The Temperature Condition Index (VCI) compares the current LST to the range of values observed in the same period in previous years. The TCI is expressed in % and gives an idea where the observed value is situated between the extreme values (minimum and maximum) in the previous years. TCI used to determine stress on vegetation caused by temperatures and excessive wetness. Conditions are estimated relative to the maximum and minimum temperatures and modified to reflect different vegetation responses to temperature.
+
+The TCI is calculated using the equation, 
+
+$TCI$ = $100$ * $\dfrac{LSTmax - LST}{LSTmax - LSTmin}$
+
+where:
+- $LST$ is the current value of LST
+- $LSTmin$ is the long-term minimum value of LST.
+- $LSTmax$ is the long-term maximum value of LST.
+
+LST max and min derived from MODIS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | a proxy for Vegetation Health Index calculation  |
+| Variable  | TCI  |
+| Geographic coverage  | Global  |
+| Spatial resolution  | 1 km at equator  |
+| Temporal resolution  | 16-days.  |
+| Format  | GeoTIFF  |
+| Unit  | Percent (%)  |
+
+
+
+
 ## NDVI anomaly
 
 The objective is to evaluate the monthly deviation of vegetation over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
@@ -107,7 +189,7 @@ Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
 
 where $x_i$ is current NDVI and $x_j$ is long-term average of NDVI.
 
-NDVI anomaly derived from MODIS data
+NDVI and NDVI long-term average derived from MODIS data
 
 #### About the data
 
@@ -136,3 +218,67 @@ NDVI anomaly derived from MODIS data
 | 120 to 130%  | `#6fec48` ![#6fec48](https://via.placeholder.com/15/6fec48/000000?text=+)  | rgb(111, 236, 72)  |
 | 130 to 150%  | `#3f8b48` ![#3f8b48](https://via.placeholder.com/15/3f8b48/000000?text=+)  | rgb(63, 139, 39)  |
 | 150% and above  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
+
+
+
+
+## Vegetation Condition Index
+
+The Vegetation Condition Index (VCI) compares the current NDVI to the range of values observed in the same period in previous years. The VCI is expressed in % and gives an idea where the observed value is situated between the extreme values (minimum and maximum) in the previous years. Lower and higher values indicate bad and good vegetation state conditions, respectively. The VCI associates with moisture condition of vegetation
+
+The anomaly is calculated based on percentage of the average
+
+$VCI$ = $100$ * $\dfrac{NDVI - NDVImin}{NDVImax - NDVImin}$
+
+where:
+- $NDVI$ is the current value of NDVI
+- $NDVImin$ is the long-term minimum value of NDVI
+- $NDVImax$ is the long-term maximum value of NDVI.
+
+NDVI long-term max and min derived from MODIS data
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | a proxy for Vegetation Health Index calculation  |
+| Variable  | VCI  |
+| Geographic coverage  | Global  |
+| Spatial resolution  | 1 km at equator  |
+| Temporal resolution  | 16-days.  |
+| Format  | GeoTIFF  |
+| Unit  | Percent (%)  |
+
+
+## Vegetation Health Index
+
+Vegetation Health Index (VHI) is based on a combination of (i) Vegetation Condition Index (VCI): associates with moisture condition of vegetation; and (ii) Temperature Condition Index (VCI): associates with thermal condition of vegetation. 
+
+The VCI is constructed using the NDVI and land surface temperature (LST) for TCI. The VHI is effective enough to be used as proxy data for monitoring vegetation health, drought, moisture, thermal condition, etc.
+
+After computing the VCI and TCI values, the final index for agricultural drought is 
+$VHI$ = $0.5 * (TCI + VCI)$
+
+#### About the data
+
+| Characteristic  | Description  |
+|---|---|
+| Function  | Displays 16-days VHI data  |
+| Variable  | VHI  |
+| Geographic coverage  | Global  |
+| Spatial resolution  | 1 km at equator  |
+| Temporal resolution  | 16-days.  |
+| Format  | GeoTIFF  |
+| Unit  | n/a  |
+
+#### Symbology
+
+?> The threshold and the symbology for the VHI can follow below colorcodes and image.
+
+| Class  | Threshold  | Hex  | RGB  |
+|---|---|---|---|
+| No Drought  | 40 and above  | `#b2b2b2` ![#b2b2b2](https://via.placeholder.com/15/b2b2b2/000000?text=+) | rgb(178, 178, 178)  |
+| Mild Drought  | 30 to 40  | `#ffe5d9` ![#ffe5d9](https://via.placeholder.com/15/ffe5d9/000000?text=+)  | rgb(255, 229, 217)  |
+| Moderate Drought  | 20 to 30  | `#fcaf92` ![#fcaf92](https://via.placeholder.com/15/fcaf92/000000?text=+)  | rgb(252, 175, 146)  |
+| Severe Drought  | 10 to 20  | `#fa6948` ![#fa6948](https://via.placeholder.com/15/fa6948/000000?text=+)  | rgb(250, 105, 72)  |
+| Extreme Drought  | 10 and below  | `#cc181e` ![#cc181e](https://via.placeholder.com/15/cc181e/000000?text=+)  | rgb(204, 24, 30)  |
