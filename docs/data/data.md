@@ -17,8 +17,8 @@ PRISM is committed to provide an open, downloadable and useful data. We believe 
 
 TERM OF USE
 
- - Use. You are free to use, distribute, copy, modify and display the outputs of PRISM for commercial and non-commercial purposes. This includes datasets as well as maps.
- - Attribution. You must clearly attribute the work and provide a link back to PRISM website for each individual dataset or map used. By doing so, you will ensure that people access the latest available information if any revision or correction made to the data or map. However, some content of PRISM may carry additional copyright restrictions. PRISM made the best effort to clearly label such content.
- - Pictures. Most of pictures featured on PRISM have either license under transferable terms or obtained via picture-sharing sites that have their own policies for public use. Unless indicated otherwise, attribution above does not apply to pictures on PRISM.
- - Charts and graphs. Charts and graphs resulted from the analysis in PRISM are free to use. Though, please refer to the article on attribution above.
+ - Use. You are free to use, distribute, copy, modify and display the outputs of PRISM for commercial and non-commercial purposes. This includes datasets as well as maps.<br>
+ - Attribution. You must clearly attribute the work and provide a link back to PRISM website for each individual dataset or map used. By doing so, you will ensure that people access the latest available information if any revision or correction made to the data or map. However, some content of PRISM may carry additional copyright restrictions. PRISM made the best effort to clearly label such content.<br>
+ - Pictures. Most of pictures featured on PRISM have either license under transferable terms or obtained via picture-sharing sites that have their own policies for public use. Unless indicated otherwise, attribution above does not apply to pictures on PRISM.<br>
+ - Charts and graphs. Charts and graphs resulted from the analysis in PRISM are free to use. Though, please refer to the article on attribution above.<br>
  - If you have any questions related to citation or re-use of PRISM contents, please [contact us](../overview/contact.md)

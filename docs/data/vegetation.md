@@ -1,3 +1,0 @@
-# Vegetation
-
-xx

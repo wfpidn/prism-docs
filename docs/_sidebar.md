@@ -11,27 +11,21 @@
 * **Data**
 	* [Overview](/data/data.md)
 	* [Baseline](/data/baseline.md)
-	* [Climate](/data/climate.md)
-	* [Vegetation](/data/vegetation.md)
-	* Snow
-	* Secondary data
+	* [Climate](/data/data_climate.md)
+	* [Vegetation](/data/data_vegetation.md)
+	* [Snow](/data/data_snow.md)
+	* [Secondary data](/data/data_secondary.md)
+* **Data: Country-specific**
+	* [Indonesia](/csd/csd_indonesia.md)
 * **Product**
 	* [Overview](/product/product.md)
-	* Rainfall anomaly
-	* Standardized Precipitation Index
-	* Dry Spell
-	* Wet Spell
-	* NDVI anomaly
-	* LST anomaly
-	* Vegetation Health Index
-	* Country-specific product
-* **Methodology**
-	* Hazard mapping
+	* [Climate-related hazard](/product/climate_hazard.md)
 	* Impact analysis
-	* Country-specific feature
+* **Product: Country-specific**
+	* [Indonesia](/csp/csp_indonesia.md)
 * **How to setup your own PRISM**
 	* [Overview](/setup/howto.md)
 	* [Backend](/setup/backend.md)
 	* [Frontend](/setup/frontend.md)
 * **API**
-	* [Overview](/api.md)
+	* [Overview](/api/api.md)
