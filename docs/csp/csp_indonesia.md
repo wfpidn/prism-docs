@@ -118,7 +118,7 @@ EVI anomaly derived from MODIS MOD13Q1 data
 
 #### Symbology
 
-?> The threshold and the symbology for the EVI anomaly can follow below colorcodes and image.
+?> The threshold and the symbology for the `16-days` EVI anomaly can follow below colorcodes and image.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
@@ -131,3 +131,50 @@ EVI anomaly derived from MODIS MOD13Q1 data
 | 120 to 130%  | `#6fec48` ![#6fec48](https://via.placeholder.com/15/6fec48/000000?text=+)  | rgb(111, 236, 72)  |
 | 130 to 150%  | `#3f8b48` ![#3f8b48](https://via.placeholder.com/15/3f8b48/000000?text=+)  | rgb(63, 139, 39)  |
 | 150% and above  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
+
+
+
+## Impact analysis
+
+Over the last decade, more than 16 600 natural disasters occurred in Indonesia, with an average 1700 disasters annually. Hydro-meteorological weather events cause 95 percent of these disasters, with floods, landslides and strong winds occurring most frequently. 
+
+Indonesia’s food systems are frequently disrupted by natural disasters. Apart from causing high human, environmental and economic costs, these extreme weather events can stress food and nutrition security, through adverse effects on food availability and access, and on nutrition situation. Extreme weather and natural disasters destroy assets, land, crops, livestock and food stock. They often make markets and supplies unreachable or unaffordable.
+
+However, despite the importance of assessing the impacts of damages and losses in the aftermath of such events, estimating impacts is timely and challenging. 
+By automating data acquisition and processing, the VAMPIRE platform provides immediate estimates of: 
+- The priority areas that are likely affected by floods or drought; 
+- Number of people that is likely affected by floods and drought, and
+- Crops that are likely affected by floods and drought (in hectares). 
+
+The drought estimates are available in near-real time (1 day ago from today); while flood impact estimates are provided 3 days ahead. 
+
+The impact estimates presented in the system use spatial analysis done by overlaying (1) estimated geographic area exposed to dry (drought) or wet (flood) season, with (2) number of people in the affected area or crop area in the affected zone. 
+
+### Dry Season
+
+#### Population
+
+Impact on population shows the number of people living in an area that has been exposed to extreme drought in the past 90 days. The indicator overlays population density with the extreme drought exposure defined by number of days since last rainfall (for extreme drought, it is more than consecutive 60 days without rain). 
+
+Data for the drought exposure is derived from the days since last rain indicator from the Integrated Multi-satellitE Retrievals for GPM (IMERG) dataset. Population density is derived from the Facebook dataset. 
+
+#### Crops
+
+The Crops affected layer refers to a crop area (in hectares) that has been exposed to extreme drought in the past 16 days. The indicator combines the exposure of an area to extreme drought (defined as less than 10 of VHI value) and a crop mask in the exposed area. The identified areas are at a risk of drought impact on crops. 
+
+Data for the drought exposure is derived from the Vegetation Health Index from MODIS dataset. Crop extent uses the MODIS crop mask.
+
+### Wet Season
+
+#### Population
+
+Impact on population shows the number of people living in an area which is forecasted to be affected by extreme rainfall that could trigger a floods in the next 1 to 5 days. The indicator overlays population density with the extreme rainfall triggering flood forecast for all alert categories to calculate the number of people affected by flood. 
+
+Data for extreme rainfall forecast is derived from the NOAA Global Forecast System and NASA GPM IMERG. Population density is derived from the Facebook dataset. 
+
+#### Crops
+
+The layer refers to a crop area (in hectares) which is forecasted to be affected by extreme rainfall that could trigger a floods in the next 1 to 5 days. The indicator overlays population density with the extreme rainfall triggering flood forecast for all alert categories with a crop mask for the area with detected alert in the next 1 to 5 days.  
+
+Data for extreme rainfall is derived from the NOAA Global Forecast System and NASA GPM IMERG. Crop extent uses the MODIS crop mask.
+

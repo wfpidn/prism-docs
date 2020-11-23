@@ -22,6 +22,24 @@ The LandScan Global Population Database is developed at the Department of Energy
 | Source  | https://landscan.ornl.gov/landscan-datasets  |
 | Reference  | https://landscan.ornl.gov/documentation  |
 
+#### Symbology
+
+?> The threshold and the symbology for the Landscan population density can follow below colorcodes and image.
+
+| Class  | Hex  | RGB  |
+|---|---|---|
+| No population  | `#c2c3c6` ![#c2c3c6](https://via.placeholder.com/15/c2c3c6/000000?text=+) | rgb(194, 195, 198)  |
+| 1 to 5  | `#fbf6c2` ![#fbf6c2](https://via.placeholder.com/15/fbf6c2/000000?text=+)  | rgb(251, 246, 194)  |
+| 6 - 25  | `#f6ef8d` ![#f6ef8d](https://via.placeholder.com/15/f6ef8d/000000?text=+)  | rgb(246, 239, 141)  |
+| 26 - 50  | `#f4e957` ![#f4e957](https://via.placeholder.com/15/f4e957/000000?text=+)  | rgb(244, 233, 87)  |
+| 51 - 100  | `#eda343` ![#eda343](https://via.placeholder.com/15/eda343/000000?text=+)  | rgb(237, 163, 67)  |
+| 101 - 500  | `#e26d38` ![#e26d38](https://via.placeholder.com/15/e26d38/000000?text=+)  | rgb(226, 109, 56)  |
+| 501 - 2,500  | `#da3832` ![#da3832](https://via.placeholder.com/15/da3832/000000?text=+)  | rgb(218, 56, 50)  |
+| 2,501 - 5,000  | `#b93634` ![#b93634](https://via.placeholder.com/15/b93634/000000?text=+)  | rgb(185, 54, 52)  |
+| 5,001 - 130,000  | `#561b1b` ![#561b1b](https://via.placeholder.com/15/561b1b/000000?text=+)  | rgb(86, 27, 27)  |
+
+
+
 ### Facebook
 
 To create high-resolution population maps, Facebook use machine learning techniques to identify buildings from commercially available satellite images. Then work with partners at Columbia University to overlay general population estimates based on publicly available census data and other population statistics. The resulting maps are the most detailed and actionable tools available for aid and research organizations.
@@ -58,3 +76,22 @@ The [GFSAD30](https://geography.wr.usgs.gov/science/croplands/index.html) is a N
 | Unit  | n/a  |
 | Source  | [Southeast and Northeast Asia](https://lpdaac.usgs.gov/products/gfsad30seacev001/)  |
 | Reference  | https://lpdaac.usgs.gov/documents/168/GFSAD30SEACE_User_Guide_V1.pdf  |
+
+
+### MODIS
+
+MODIS global croplands extent datasets utilized 250m MODIS (MODerate Resolution Imaging Spectroradiometer) data to map global production cropland extent. A set of multi-year MODIS metrics incorporating four MODIS land bands, NDVI (Normalized Difference Vegetation Index) and thermal data was employed to depict cropland phenology over the period 2000-2008.
+
+With a spatial resolution of 250m, the Global Cropland Extent product represents the finest-scale global cropland map derived using synoptic inputs, and due to the inclusion of 9 years of MODIS data it is designed to be relatively insensitive to inter-annual variability in depicting core cropland production areas. 
+
+| Characteristic  | Cropland Probability  | Discrete Cropland/Non-Cropland  |
+|---|---|---|
+| Function  | a proxy for impact analysis  | a proxy for impact analysis  |
+| Variable  | Crop extent  | Crop extent  |
+| Geographic coverage  | Global  | Global  |
+| Spatial resolution  | 250 meter/pixel  | 250 meter/pixel  |
+| Temporal resolution  | n/a (Year estimation is 2010)  | n/a (Year estimation is 2010)  |
+| Format  | GeoTIFF  | GeoTIFF  |
+| Unit  | Value from 1 to 100 is probability that pixel is production cropland. Value of 0 is water and value of 255 is no data.  | A value of 1 means cropland, 0 means not cropland. A value of 254 means water and 255 is no data.  |
+| Source  | http://glad.geog.umd.edu/dataset/gce/250mprob  | http://glad.geog.umd.edu/dataset/gce/modis-global-crop-extent-discrete-croplandnot-cropland-data  |
+| Reference  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  |
