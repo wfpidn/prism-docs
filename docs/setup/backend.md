@@ -1,24 +1,25 @@
 # Backend
 
-This contains the code that downloads and extracts the data from the various raw sources, performs calculations, and produces data products. It also contains the setup for the [Geoserver](http://geoserver.org/) that serves up the data products to the front-end.
+Ini berisi kode yang mengunduh dan mengekstrak data dari berbagai sumber mentah, melakukan perhitungan, dan menghasilkan produk data. Ini juga berisi pengaturan untuk [Geoserver](http://geoserver.org/) yang menyajikan produk data ke front-end.
 
-## Development
+
+## Pengembangan
 ---
 
-### Requirements
+### Persyaratan
 
-To make it easier to develop locally, we decided to use docker and Make.
-The only requirements are docker and docker-compose.
-If they are not installed on your machine, you can follow these steps to get started:
+Untuk membuatnya lebih mudah untuk dikembangkan secara lokal, kami memutuskan untuk menggunakan Docker dan Make.
+Satu-satunya persyaratan adalah docker dan docker-compose.
+Jika mereka tidak diinstal pada mesin Anda, Anda dapat mengikuti langkah-langkah ini untuk memulai:
 https://docs.docker.com/compose/install/
 
 ### Environment
 
-You will need to setup a `.env` file with the required information. You can use `.env.sample` as an example.
+Anda perlu menyiapkan file `.env` dengan informasi yang diperlukan. Anda dapat menggunakan `.env.sample` sebagai contoh.
 
-### Data Files
+### File Data
 
-To avoid checking in large files to the repository, we removed generated data files, SQL data, and Boundary/"shapefiles" used to filter data by country. In order to create data products or start the Geoserver, you will likely need to download additional files. You can download archives containing these files from the following links. Copy these archive files into the main `prism/backend` directory, then extract them to get the relevant files:
+Untuk menghindari pemeriksaan file besar ke repositori, kami menghapus file data yang dihasilkan, data SQL, dan Boundary/"shapefiles" yang digunakan untuk memfilter data menurut negara. Untuk membuat produk data atau memulai Geoserver, Anda mungkin perlu mengunduh file tambahan. Anda dapat mengunduh arsip yang berisi file-file ini dari tautan berikut. Salin file arsip ini ke direktori `prisma/backend` utama, lalu ekstrak untuk mendapatkan file yang relevan:
 
 ```
 cd prism/backend
@@ -27,29 +28,28 @@ curl -O https://wfp-prism.s3-us-west-1.amazonaws.com/prism_sql_20191010.tar.gz
 tar -xzvf prism_sql_20191010.tar.gz
 ```
 
-Here are links to some import files:
+Berikut ini tautan ke beberapa file impor:
 
 - **Indonesia Shape Files:** https://wfp-prism.s3-us-west-1.amazonaws.com/prism_shapefiles_20191010.tar.gz
-  These shapefiles are necessary to create data products for Indonesia.
+  Shapefile ini diperlukan untuk membuat produk data untuk Indonesia.
 - **Sample SQL data:** https://wfp-prism.s3-us-west-1.amazonaws.com/prism_sql_20191010.tar.gz
-  This contains SQL dumps from data products created for Indonesia.
+  Ini berisi dump SQL dari produk data yang dibuat untuk Indonesia.
 - **Mock Geoserver data:** https://wfp-prism.s3-us-west-1.amazonaws.com/prism_geoserver_mock_data_20191010.tar.gz
-  This contains sample data products to allow the Geoserver to serve a "mock" response, or example of each time of data product.
+  Ini berisi contoh produk data untuk memungkinkan Geoserver menyajikan respons "tiruan", atau contoh setiap kali produk data.
 
-If you would like to make your own archive with large files (remember, we don't want to check large files into the repo) that would be useful to your team, you can easily create your own archive. The easiest way to do this is to construct a `find` query that matches the files that you would like to share, and then create an archive using `tar`. For example, if you wanted to create an archive of all the `.tif` files in `geoserver_data`:
+Jika Anda ingin membuat arsip Anda sendiri dengan file besar (ingat, kami tidak ingin memeriksa file besar ke dalam repo) yang akan berguna untuk tim Anda, Anda dapat dengan mudah membuat arsip Anda sendiri. Cara termudah untuk melakukannya adalah dengan membuat kueri `find` yang cocok dengan file yang ingin Anda bagikan, lalu membuat arsip menggunakan `tar`. Misalnya, jika Anda ingin membuat arsip semua file `.tif` di `geoserver_data`:
 
 ```
 find geoserver_data -name *.tif -exec tar -czvf my_archive.tar.gz {} \;
 ```
 
-This produces `my_archive.tar.gz`. `find` supports a wide variety of selectors, including regex.
+Ini menghasilkan `my_archive.tar.gz`. `find` mendukung berbagai macam pemilih, termasuk regex.
+### Menjalankan Produk
+Skrip task runner mencoba membuat tugas mudah dijalankan. Secara otomatis memulai Docker containers
+dan kemudian menjalankan tugas di dalam containers. Script ini membutuhkan docker untuk diinstal dan
+dikonfigurasi di lingkungan lokal, dan membutuhkan Python 3.6 untuk diinstal.
 
-### Running Products
-A task runner script attempts to make tasks easy to run. It automatically starts Docker containers
-and then runs tasks inside the containers. This script requires docker to be installed and 
-configured in the local environment, and requires Python 3.6 to be installed.
-
-To run the different products locally you can use the two following scripts. The runner scripts have runtime help available with `--help`. For many of the products (spi, vhi, dslr, rainfall_anomaly etc.), you'll also want to specify a date with the -d YYYY-MM-DD option (it defaults to using the current date, but that's usually not what you want to do).
+Untuk menjalankan produk yang berbeda secara lokal, Anda dapat menggunakan dua skrip berikut. Skrip runner memiliki bantuan runtime yang tersedia dengan `--help`. Untuk banyak produk (spi, vhi, dslr, rain_anomaly, dll.), Anda juga ingin menentukan tanggal dengan opsi -d YYYY-MM-DD (defaultnya menggunakan tanggal saat ini, tetapi biasanya bukan itu yang ingin Anda lakukan).
 
 ```
 ./run_prism_task.py PRODUCT_NAME -d 2019-06-01
@@ -57,36 +57,34 @@ To run the different products locally you can use the two following scripts. The
 ./scripts/backfill_data.py PRODUCT_NAME 2019-01-01 2019-11-01
 ```
 
-Note that this script is merely a wrapper around to `./prism_process.py` that orchestrates the
-Docker calls and better default argument handling.
+Perhatikan bahwa skrip ini hanyalah pembungkus untuk `./prism_process.py` yang mengatur
+Panggilan Docker dan penanganan argumen default yang lebih baik.
 
-By default, this command runs a "full" PRISM task, which includes generating a YAML task
-configuration file (by default in `./config/{country}_{task}.yml`) and then running the task as 
-defined by that file. If you would like to separate these steps (e.g. just generate the config file 
-or just run a task based on an existing config file), you can do this:
+Secara default, perintah ini menjalankan tugas PRISM "penuh", yang mencakup pembuatan tugas YAML
+file konfigurasi (secara default di `./config/{country}_{task}.yml`) dan kemudian menjalankan tugas yang ditentukan oleh file itu. Jika Anda ingin memisahkan langkah-langkah ini (misalnya, buat saja file konfigurasi atau jalankan saja tugas berdasarkan file konfigurasi yang ada), Anda dapat melakukan ini:
 
-**Generate a config (don't run the task)**
+**Hasilkan konfigurasi (jangan jalankan tugas)**
 ```
 $ ./run_prism_task.py -o="generate_config" spi
 ```
 
-**Run the task (without generating/overwriting a config)**
+**Jalankan tugas (tanpa membuat/menimpa konfigurasi)**
 ```
 $ ./run_prism_task.py -o="run" spi
 ```
 
-#### Available Products
-To get started, we recommend getting access to pre-computed data, at least for the long term averages which can take a very long time to compute.
+#### Produck tersedia
+Untuk memulai, kami sarankan untuk mendapatkan akses ke data yang telah dihitung sebelumnya, setidaknya untuk rata-rata jangka panjang yang membutuhkan waktu yang sangat lama untuk dihitung.
 
-Here is a list of the different products available. Note that the underlying data might not always be available in the country of interest.
+Berikut adalah daftar berbagai produk yang tersedia. Perhatikan bahwa data yang mendasarinya mungkin tidak selalu tersedia di negara tujuan.
 
-**Long Term Averages**
+**Rata-rata Jangka Panjang**
 - evi_longterm_average
 - chirps_longterm_average
 - lst_longterm_average
 
 
-**Products**
+**Produk**
 - days_since_last_rain
 - flood_forecast
 - vci
@@ -95,12 +93,11 @@ Here is a list of the different products available. Note that the underlying dat
 - rainfall_anomaly
 - spi
 
-### Locally
+### Secara lokal
 
-To get started, simply run `make backend` from the main folder.
-
+Untuk memulai, jalankan `make backend` dari folder utama.
 ## Tests & Linters
 
-To ensure consistency in code quality and calculation outcomes, we implemented a testing framework (pytest) and linters (pep8 + flake8) for Python.
+Untuk memastikan konsistensi dalam kualitas kode dan hasil penghitungan, kami menerapkan kerangka pengujian (pytest) dan linter (pep8 + serpihan8) untuk Python.
 
-All the functions of the Prism backend should be tested. The "test coverage" expectation will be set at 90%.
+Semua fungsi backend Prism harus diuji. Ekspektasi "cakupan uji" akan ditetapkan pada 90%.

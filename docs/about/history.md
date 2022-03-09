@@ -1,31 +1,31 @@
-# History
+# Sejarah
 
-### **2014**
+> ### **2014**
 
- - [PRISM](https://insight.wfp.org/prism-using-data-to-save-lives-in-cambodia-9607ebde5e21) born in Cambodia as a tool for visualising program performance in near-real time through mobile data collection tools and web-based mapping tools.
+ - [PRISM](https://insight.wfp.org/prism-using-data-to-save-lives-in-cambodia-9607ebde5e21) dikembangkan in Cambodia sebagai alat untuk memvisualisasikan kinerja program secara hampir real-time melalui alat pengumpulan data seluler dan alat pemetaan berbasis web.
 
-### **2015**
+> ### **2015**
 
- - The [super](https://en.wikipedia.org/wiki/2014–16_El_Niño_event) El Niño of 2015-2016 was the biggest, so far, of the 21st century hit South East Asian country hard, caused prolonged drought and impact on agriculture production failure.
+ - [Super](https://en.wikipedia.org/wiki/2014–16_El_Niño_event) El Niño pada tahun 2015-2016 adalah yang terbesar sejauh ini pada abad ke 21 yang melanda kawasan Asia Tenggara dengan keras, menyebabkan kekeringan berkepanjangan dan berdampak pada kegagalan produksi pertanian.
 
-### **2016**
+> ### **2016**
 
- - The Vulnerability Analysis and Monitoring Platform for Impact of Regional Events - [VAMPIRE](http://vampire.pulselabjakarta.org/#) (an inside pun which played on WFP’s Vulnerability Analysis and Mapping unit’s acronym) born in Indonesia, developed by [World Food Programme](https://www.wfp.org/countries/indonesia) and [Pulse Lab Jakarta](http://pulselabjakarta.id/), as a tool for drought monitoring during El Niño.
+ - Platform Analisis dan Pemantauan Kerentanan untuk Dampak Peristiwa Regional - [VAMPIRE](http://vampire.pulselabjakarta.org/#) (permainan kata dalam akronim untuk unit Analisis Kerentanan dan Pemetaan (Vulnerability Analysis and Mapping - VAM) WFP) lahir di Indonesia, dikembangkan oleh [World Food Programme](https://www.wfp.org/countries/indonesia) and [Pulse Lab Jakarta](http://pulselabjakarta.id/), sebagai alat pemantauan kekeringan selama El Niño.
 
-### **2017**
+> ### **2017**
 
- - VAMPIRE won the [2017 WFP Innovation Challenge](https://insight.wfp.org/wfp-staff-show-entrepreneurial-side-in-annual-competition-be03924215).
+ - VAMPIRE memenangkan [2017 WFP Innovation Challenge](https://insight.wfp.org/wfp-staff-show-entrepreneurial-side-in-annual-competition-be03924215).
 
- - Sri Lanka use VAMPIRE codebase to build [PRISM](http://52.221.143.5/prism/) for drought monitoring and installed in National Disaster Management Office (NDMO).
+ - Sri Lanka menggunakan basis kode VAMPIRE untuk membangun [PRISM](http://52.221.143.5/prism/) untuk pemantauan kekeringan dan dipasang di National Disaster Management Office (NDMO).
 
-### **2018**
+> ### **2018**
 
- - Regional Innovation Meeting held in Phnom Penh, Cambodia to discuss on integration between PRISM and VAMPIRE
+ - Pertemuan Inovasi Regional diadakan di Phnom Penh, Kamboja untuk membahas integrasi antara PRISM dan VAMPIRE
 
-### **2019**
+> ### **2019**
 
- - VAMPIRE+PRISM integration started for accelerating risk and impact in the WFP Regional Bureau Bangkok (RBB) countries, and become Platform for Real-time Impact and Situation Monitoring (PRISM).
+ - Integrasi VAMPIRE+PRISM dimulai untuk mempercepat risiko dan dampak di negara-negara WFP Regional Bureau Bangkok (RBB), dan menjadi Platform untuk Real-time Impact and Situation Monitoring (PRISM).
 
-### **2020**
+> ### **2020**
 
- - PRISM deployed in [Mongolia](https://prism-mongolia.org)
+ - PRISM digunakan in [Mongolia](https://prism-mongolia.org)

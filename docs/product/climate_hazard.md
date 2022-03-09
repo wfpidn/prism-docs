@@ -1,45 +1,42 @@
-# Climate-related Hazard
+# Bahaya terkait iklim
 
-Mapping the extent of a natural hazard (e.g., assessing areas with a high risk) or disaster is a first step in disaster risk management and emergency response. Subsequently, exposure mapping enables the estimation of the impact of hazards or disasters, for example, regarding the number of affected inhabitants or infrastructure. 
+Pemetaan tingkat bahaya alam (misalnya, menilai daerah dengan risiko tinggi) atau bencana adalah langkah pertama dalam manajemen risiko bencana dan tanggap darurat. Selanjutnya, pemetaan keterpaparan memungkinkan estimasi dampak bahaya atau bencana, misalnya mengenai jumlah penduduk atau infrastruktur yang terkena dampak.
 
-This section describes in detail the methodology and analysis operations required to meet the user requirements of WFP at country or regional level. This is based on extensive search from related journal for impact calculation during the disaster and availability global free data on internet. 
+Bagian ini menjelaskan secara rinci metodologi dan operasi analisis yang diperlukan untuk memenuhi persyaratan pengguna WFP di tingkat negara atau regional. Hal ini didasarkan pada pencarian ekstensif dari jurnal terkait untuk perhitungan dampak selama bencana dan ketersediaan data gratis global di internet.
 
+## Curah hujan (rasio) anomali
 
+Tujuan dari anomali curah hujan adalah untuk mengevaluasi kualitas curah hujan bulanan di negara tersebut. Hal ini dicapai melalui analisis anomali, yaitu perbandingan terhadap referensi. Referensi klasik adalah rata-rata jangka panjang.
 
+Anomali curah hujan dibangkitkan berdasarkan data dekad. Model akan menghitung akumulasi curah hujan dan indeks iklim lainnya dari curah hujan berdasarkan data selama dekad terbaru yang telah dikumpulkan dari perkiraan pentad. Setiap bulan memiliki tiga dekad, sehingga dua dekad pertama memiliki 10 hari (yaitu, 1-10, 11-20), dan yang ketiga terdiri dari sisa hari dalam sebulan (21-28 atau 21-29 atau 21- 30 atau 21-31 Oleh karena itu, panjang dekad ketiga setiap bulan tidak konsisten dan bervariasi dari 8-11 hari, tergantung pada panjang bulan.
 
-## Rainfall (ratio) anomaly
+Anomali dihitung berdasarkan persentase rata-rata
 
-The objective of rainfall anomaly is to evaluate the quality of monthly rainfall over the country. This is achieved through analysis of anomalies, i.e. a comparison against a reference. The classic reference is the long-term average. 
+Anomali (%) = $100$ * $\dfrac{x_i}{x_j}$
 
-Rainfall anomaly is generated based on dekad data. The model will calculate the accumulated rainfall and other climate indices of precipitation based on that data during the most recent dekad which has been aggregated from pentad estimates. Every month has three dekads, such that the first two dekads have 10 days (i.e., 1-10, 11-20), and the third is comprised of the remaining days of the month (21-28 or 21-29 or 21-30 or 21-31. Therefore, the length of the third dekad of each month is not consistent and varies from 8-11 days, depending on the length of the month.
+dimana $x_i$ curah hujan saat ini dan $x_j$ adalah curah hujan rata-rata jangka panjang.
 
-The anomaly is calculated based on percentage of the average
+Anomali curah hujan yang berasal dari data CHIRPS
 
-Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
+#### Tentang data
 
-where $x_i$ is current rainfall and $x_j$ is long-term average of rainfall.
-
-Rainfall anomaly derived from CHIRPS data
-
-#### About the data
-
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays dekad and monthly rainfall anomaly data  |
-| Variable  | Rainfall anomaly  |
-| Geographic coverage  | Global 50N-50S, 180W-180E |
-| Spatial resolution  | 0.05 degree ~ 5.6 km at equator  |
-| Temporal resolution  | dekad, 1-month, 3-month, 6-month, 9-month and 12-month, rolling by dekad.  |
+| Fungsi  | Menampilkan data anomali curah hujan dekad dan bulanan  |
+| Variabel  | Anomali curah hujan  |
+| Cakupan Geografis  | Global 50N-50S, 180W-180E |
+| Resolusi Spasial  | 0.05 derajat ~ 5.6 km di equator  |
+| Resolusi sementara  | dekad, 1 bulan, 3 bulan, 6 bulan, 9 bulan, dan 12 bulan, bergulir oleh dekad.  |
 | Format  | GeoTIFF  |
-| Unit  | Percent (%)  |
+| Unit  | Persen (%)  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the rainfall anomaly can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk anomali curah hujan dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| 40% and below  | `#a16622` ![#a16622](https://via.placeholder.com/15/a16622/000000?text=+) | rgb(161, 102, 34)  |
+| 40% ke bawah  | `#a16622` ![#a16622](https://via.placeholder.com/15/a16622/000000?text=+) | rgb(161, 102, 34)  |
 | 40 to 60%  | `#db9835` ![#db9835](https://via.placeholder.com/15/db9835/000000?text=+)  | rgb(219, 152, 53)  |
 | 60 to 80%  | `#eec883` ![#eec883](https://via.placeholder.com/15/eec883/000000?text=+)  | rgb(238, 200, 131)  |
 | 80 to 90%  | `#fcebb6` ![#fcebb6](https://via.placeholder.com/15/fcebb6/000000?text=+)  | rgb(252, 235, 182)  |
@@ -47,45 +44,45 @@ Rainfall anomaly derived from CHIRPS data
 | 110 to 120%  | `#caf8f9` ![#caf8f9](https://via.placeholder.com/15/caf8f9/000000?text=+)  | rgb(202, 248, 249)  |
 | 120 to 140%  | `#91e0ee` ![#91e0ee](https://via.placeholder.com/15/91e0ee/000000?text=+)  | rgb(145, 224, 238)  |
 | 140 to 180%  | `#50b7da` ![#50b7da](https://via.placeholder.com/15/50b7da/000000?text=+)  | rgb(80, 183, 218)  |
-| 180% and above  | `#3d78cf` ![#3d78cf](https://via.placeholder.com/15/3d78cf/000000?text=+)  | rgb(61, 120, 207)  |
+| 180% ke atas  | `#3d78cf` ![#3d78cf](https://via.placeholder.com/15/3d78cf/000000?text=+)  | rgb(61, 120, 207)  |
 
 
 
 
-## Standardized Precipitation Index
+## Indeks Presipitasi Standar
 
-The Standardized Precipitation Index (SPI) is a normalized index representing the probability of occurrence of an observed rainfall amount when compared with the rainfall climatology over a long-term period. This long-term record is fitted to a probability distribution, which is then transformed into a normal distribution so that the mean SPI for the location and desired period is zero.
+Standardized Precipitation Index (SPI) adalah indeks normalisasi yang mewakili kemungkinan terjadinya jumlah curah hujan yang diamati jika dibandingkan dengan klimatologi curah hujan dalam periode jangka panjang. Catatan jangka panjang ini dicocokkan dengan distribusi probabilitas, yang kemudian diubah menjadi distribusi normal sehingga rata-rata SPI untuk lokasi dan periode yang diinginkan adalah nol.
 
-Negative SPI values represent rainfall deficit and less than median precipitation (Dry), starts when the SPI value is equal or below -1.0. Whereas positive SPI values indicate rainfall surplus and greater than median precipitation (Wet), starts when the SPI value is equal or above 1.0, and ends when the value becomes negative.
+Nilai SPI negatif merupakan defisit curah hujan dan kurang dari median curah hujan (Kering), dimulai ketika nilai SPI sama atau di bawah -1.0. Sedangkan nilai SPI positif menunjukkan kelebihan curah hujan dan lebih besar dari curah hujan median (Basah), dimulai ketika nilai SPI sama atau di atas 1,0, dan berakhir ketika nilainya menjadi negatif.
 
-### How it works
-- Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.
-- A normalized distribution allows for estimation of both dry and wet periods.
-- Accumulated values can be used to analyse drought severity (magnitude).
-- At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.
-- SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.
-- It is spatially invariant in its interpretation.
-- Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.
+### Bagaimana ini bekerja
+- Curah hujan dinormalisasi menggunakan fungsi distribusi probabilitas sehingga nilai SPI benar-benar dilihat sebagai simpangan baku dari median.
+- Distribusi yang dinormalisasi memungkinkan estimasi periode kering dan basah.
+- Nilai akumulasi dapat digunakan untuk menganalisis tingkat keparahan kekeringan (magnitudo).
+- Diperlukan setidaknya 30 tahun data curah hujan bulanan terus menerus tetapi catatan jangka panjang akan lebih disukai.
+- Interval skala waktu SPI yang lebih pendek dari 1 bulan dan lebih dari 24 bulan mungkin tidak dapat diandalkan.
+- Ini secara spasial invarian dalam interpretasinya.
+- Sifatnya yang berbasis probabilitas (probabilitas presipitasi yang diamati diubah menjadi indeks) membuatnya sangat cocok untuk manajemen risiko dan pemicu pengambilan keputusan.
 
-Python packages [climate-indices](https://pypi.org/project/climate-indices/) developed by [U.S. Drought Portal](https://www.drought.gov/drought/python-climate-indices) used to calculate the index.
+Python packages [climate-indices](https://pypi.org/project/climate-indices/) dikembangkan oleh [U.S. Drought Portal](https://www.drought.gov/drought/python-climate-indices) digunakan untuk mengkalkulasi index.
 
-SPI derived from CHIRPS data
+SPI berasal dari data CHIRPS
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays SPI-1, SPI-2, SPI-3, SPI-6, SPI-9, SPI-12 and SPI-24  |
-| Variable  | SPI  |
-| Geographic coverage  | Global 50N-50S, 180W-180E |
-| Spatial resolution  | 0.05 degree ~ 5.6 km at equator  |
-| Temporal resolution  | 1-month, 3-month, 6-month, 9-month, 12-month and 24-month, rolling by dekad.  |
+| Fungsi  | Menampilkan SPI-1, SPI-2, SPI-3, SPI-6, SPI-9, SPI-12 and SPI-24  |
+| Variabel  | SPI  |
+| Cakupan Geografis  | Global 50N-50S, 180W-180E |
+| Resolusi Spasial  | 0.05 degree ~ 5.6 km at equator  |
+| Resolusi sementara  | 1-bulan, 3-bulan, 6-bulan, 9-bulan, 12-bulan and 24-bulan, bergulir oleh dekad.  |
 | Format  | GeoTIFF  |
 | Unit  | n/a  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the SPI can follow below color codes and image.
+?> Ambang batas dan simbologi untuk SPI dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -104,39 +101,39 @@ SPI derived from CHIRPS data
 
 
 
-## LST (difference) anomaly
+## LST (selisih) anomali
 
-The objective is to evaluate the monthly deviation of temperature over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
+Tujuannya adalah untuk mengevaluasi deviasi bulanan suhu di seluruh negeri. Hal ini dicapai melalui analisis Anomali, (yaitu perbandingan terhadap referensi).
 
-The anomaly is calculated based on difference of the average.
+Anomali dihitung berdasarkan selisih rata-rata.
 
-LST anomaly (°C) = $LST - LSTavg$
+LST anomali (°C) = $LST - LSTavg$
 
-where:
-- $LST$ is the current value of LST
-- $LSTavg$ is the long-term average value of LST.
+dimana:
+- $LST$ adalah nilai LST saat ini
+- $LSTavg$ adalah nilai rata-rata jangka panjang dari LST.
 
-LST and LST long-term average derived from MODIS data
+LST dan Rata-rata jangka panjang LST berasal dari data MODIS
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 8-days LST anomaly data  |
-| Variable  | LST anomaly  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 1 km at equator  |
-| Temporal resolution  | 8-days.  |
+| Fungsi  | Menampilkan data anomali LST 8 hari  |
+| Variabel  | anomali LST |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 1 km di equator  |
+| Resolusi sementara  | 8-hari.  |
 | Format  | GeoTIFF  |
-| Unit  | Degrees Celcius (°C)  |
+| Unit  | Derajat Celcius (°C)  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the `8-days` land surface temperature difference anomaly in degree celcius (°C) can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk anomali perbedaan suhu permukaan tanah `8 hari` dalam derajat celcius (°C) dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| -10 and below  | `#b2182b` ![#b2182b](https://via.placeholder.com/15/b2182b/000000?text=+) | rgb(178, 24, 43)  |
+| -10 ke bawah  | `#b2182b` ![#b2182b](https://via.placeholder.com/15/b2182b/000000?text=+) | rgb(178, 24, 43)  |
 | -10 to -5  | `#d6604d` ![#d6604d](https://via.placeholder.com/15/d6604d/000000?text=+)  | rgb(214, 96, 77)  |
 | -5 to -2  | `#f4a582` ![#f4a582](https://via.placeholder.com/15/f4a582/000000?text=+)  | rgb(244, 165, 130)  |
 | -2 to -1  | `#fddbc7` ![#fddbc7](https://via.placeholder.com/15/fddbc7/000000?text=+)  | rgb(253, 219, 199)  |
@@ -144,72 +141,72 @@ LST and LST long-term average derived from MODIS data
 | +1 to +2  | `#d1e5f0` ![#d1e5f0](https://via.placeholder.com/15/d1e5f0/000000?text=+)  | rgb(209, 229, 240)  |
 | +2 to +5  | `#92c5de` ![#92c5de](https://via.placeholder.com/15/92c5de/000000?text=+)  | rgb(146, 197, 222)  |
 | +5 to +10  | `#4393c3` ![#4393c3](https://via.placeholder.com/15/4393c3/000000?text=+)  | rgb(67, 147, 195)  |
-| +10 and above  | `#2166ac` ![#2166ac](https://via.placeholder.com/15/2166ac/000000?text=+)  | rgb(33, 102, 172)  |
+| +10 ke atas  | `#2166ac` ![#2166ac](https://via.placeholder.com/15/2166ac/000000?text=+)  | rgb(33, 102, 172)  |
 
 
 
 
-## Temperature Condition Index
+## Indeks Kondisi Suhu
 
-The Temperature Condition Index (VCI) compares the current LST to the range of values observed in the same period in previous years. The TCI is expressed in % and gives an idea where the observed value is situated between the extreme values (minimum and maximum) in the previous years. TCI used to determine stress on vegetation caused by temperatures and excessive wetness. Conditions are estimated relative to the maximum and minimum temperatures and modified to reflect different vegetation responses to temperature.
+Indeks Kondisi Suhu (VCI) membandingkan LST saat ini dengan kisaran nilai yang diamati pada periode yang sama di tahun-tahun sebelumnya. TCI dinyatakan dalam % dan memberikan gambaran di mana nilai yang diamati terletak di antara nilai-nilai ekstrim (minimum dan maksimum) pada tahun-tahun sebelumnya. TCI digunakan untuk menentukan stres pada vegetasi yang disebabkan oleh suhu dan kebasahan yang berlebihan. Kondisi diperkirakan relatif terhadap suhu maksimum dan minimum dan dimodifikasi untuk mencerminkan respon vegetasi yang berbeda terhadap suhu.
 
-The TCI is calculated using the equation, 
+TCI dihitung menggunakan persamaan,
 
 $TCI$ = $100$ * $\dfrac{LSTmax - LST}{LSTmax - LSTmin}$
 
-where:
-- $LST$ is the current value of LST
-- $LSTmin$ is the long-term minimum value of LST.
-- $LSTmax$ is the long-term maximum value of LST.
+dimana:
+- $LST$ adalah nilai saat ini dari LST
+- $LSTmin$ adalah nilai minimum jangka panjang dari LST.
+- $LSTmax$ adalah nilai maksimum jangka panjang dari LST.
 
-LST max and min derived from MODIS data
+LST max and min berasal dari data MODIS
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | a proxy for Vegetation Health Index calculation  |
-| Variable  | TCI  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 1 km at equator  |
-| Temporal resolution  | 16-days.  |
+| Fungsi  | proxy untuk perhitungan Indeks Kesehatan Vegetasi |
+| Variabel  | TCI  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 1 km di equator  |
+| Resolusi sementara  | 16-hari.  |
 | Format  | GeoTIFF  |
-| Unit  | Percent (%)  |
+| Unit  | Persen (%)  |
 
 
 
 
-## NDVI anomaly
+## Anomali NDVI
 
-The objective is to evaluate the monthly deviation of vegetation over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
+Tujuannya adalah untuk mengevaluasi penyimpangan bulanan vegetasi di seluruh negeri. Hal ini dicapai melalui analisis Anomali, (yaitu perbandingan terhadap referensi).
 
-The anomaly is calculated based on percentage of the average
+Anomali dihitung berdasarkan persentase rata-rata
 
-Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
+Anomali (%) = $100$ * $\dfrac{x_i}{x_j}$
 
-where $x_i$ is current NDVI and $x_j$ is long-term average of NDVI.
+dimana $x_i$ adalah NDVI saat ini dan $x_j$ adalah rata-rata jangka panjang dari NDVI.
 
-NDVI and NDVI long-term average derived from MODIS data
+Rata-rata jangka panjang NDVI dan NDVI berasal dari data MODIS
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 16-days NDVI anomaly data  |
-| Variable  | NDVI anomaly  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 1 km at equator  |
-| Temporal resolution  | 16-days.  |
+| Fungsi  | Menampilkan data anomali NDVI 16 hari  |
+| Variabel  | Anomali NDVI  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 1 km di equator  |
+| Resolusi sementara  | 16-hari.  |
 | Format  | GeoTIFF  |
-| Unit  | Percent (%)  |
+| Unit  | Persen (%)  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the NDVI anomaly can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk anomali NDVI dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| 50% and below  | `#6a2b0e` ![#6a2b0e](https://via.placeholder.com/15/6a2b0e/000000?text=+) | rgb(106, 43, 14)  |
+| 50% ke bawah  | `#6a2b0e` ![#6a2b0e](https://via.placeholder.com/15/6a2b0e/000000?text=+) | rgb(106, 43, 14)  |
 | 50 to 70%  | `#e06c2c` ![#e06c2c](https://via.placeholder.com/15/e06c2c/000000?text=+)  | rgb(224, 108, 44)  |
 | 70 to 80%  | `#ebb049` ![#ebb049](https://via.placeholder.com/15/ebb049/000000?text=+)  | rgb(235, 176, 73)  |
 | 80 to 90%  | `#e5db9e` ![#e5db9e](https://via.placeholder.com/15/e5db9e/000000?text=+)  | rgb(229, 219, 158)  |
@@ -217,63 +214,64 @@ NDVI and NDVI long-term average derived from MODIS data
 | 110 to 120%  | `#d6fb57` ![#d6fb57](https://via.placeholder.com/15/d6fb57/000000?text=+)  | rgb(214, 251, 87)  |
 | 120 to 130%  | `#6fec48` ![#6fec48](https://via.placeholder.com/15/6fec48/000000?text=+)  | rgb(111, 236, 72)  |
 | 130 to 150%  | `#3f8b48` ![#3f8b48](https://via.placeholder.com/15/3f8b48/000000?text=+)  | rgb(63, 139, 39)  |
-| 150% and above  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
+| 150% ke atas  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
 
 
 
 
-## Vegetation Condition Index
+## Indeks Kondisi Vegetasi
 
-The Vegetation Condition Index (VCI) compares the current NDVI to the range of values observed in the same period in previous years. The VCI is expressed in % and gives an idea where the observed value is situated between the extreme values (minimum and maximum) in the previous years. Lower and higher values indicate bad and good vegetation state conditions, respectively. The VCI associates with moisture condition of vegetation
+Vegetation Condition Index (VCI) membandingkan NDVI saat ini dengan kisaran nilai yang diamati pada periode yang sama di tahun-tahun sebelumnya. VCI dinyatakan dalam % dan memberikan gambaran di mana nilai yang diamati terletak di antara nilai-nilai ekstrim (minimum dan maksimum) pada tahun-tahun sebelumnya. Nilai yang lebih rendah dan lebih tinggi menunjukkan kondisi vegetasi yang buruk dan baik. VCI berhubungan dengan kondisi kelembaban vegetasi
 
-The anomaly is calculated based on percentage of the average
+Anomali dihitung berdasarkan persentase rata-rata
 
 $VCI$ = $100$ * $\dfrac{NDVI - NDVImin}{NDVImax - NDVImin}$
 
-where:
-- $NDVI$ is the current value of NDVI
-- $NDVImin$ is the long-term minimum value of NDVI
-- $NDVImax$ is the long-term maximum value of NDVI.
+dimana:
+- $NDVI$ adalah nilai saat ini dari NDVI
+- $NDVImin$ adalah nilai minimum jangka panjang dari NDVI
+- $NDVImax$ adalah nilai maksimum jangka panjang NDVI.
 
-NDVI long-term max and min derived from MODIS data
+Maks dan min jangka panjang NDVI berasal dari data MODIS
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | a proxy for Vegetation Health Index calculation  |
-| Variable  | VCI  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 1 km at equator  |
-| Temporal resolution  | 16-days.  |
+| Fungsi  | proxy untuk perhitungan Indeks Kesehatan Vegetasi  |
+| Variabel  | VCI  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 1 km di equator  |
+| Resolusi sementara  | 16-hari.  |
 | Format  | GeoTIFF  |
-| Unit  | Percent (%)  |
+| Unit  | Persen (%)  |
 
 
-## Vegetation Health Index
+## Indeks Kesehatan Vegetasi
 
-Vegetation Health Index (VHI) is based on a combination of (i) Vegetation Condition Index (VCI): associates with moisture condition of vegetation; and (ii) Temperature Condition Index (VCI): associates with thermal condition of vegetation. 
+Vegetation Health Index (VHI) didasarkan pada kombinasi (i) Vegetation Condition Index (VCI): berhubungan dengan kondisi kelembaban vegetasi; dan (ii) Indeks Kondisi Suhu (VCI): berhubungan dengan kondisi termal vegetasi.
 
-The VCI is constructed using the NDVI and land surface temperature (LST) for TCI. The VHI is effective enough to be used as proxy data for monitoring vegetation health, drought, moisture, thermal condition, etc.
+VCI dibangun menggunakan NDVI dan suhu permukaan tanah (LST) untuk TCI. VHI cukup efektif untuk digunakan sebagai data proxy untuk memantau kesehatan vegetasi, kekeringan, kelembaban, kondisi termal, dll.
 
-After computing the VCI and TCI values, the final index for agricultural drought is 
+Setelah menghitung nilai VCI dan TCI, indeks akhir untuk kekeringan pertanian adalah
+
 $VHI$ = $0.5 * (TCI + VCI)$
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 16-days VHI data  |
-| Variable  | VHI  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 1 km at equator  |
-| Temporal resolution  | 16-days.  |
+| Fungsi  | Menampilkan data VHI 16 hari  |
+| Variabel  | VHI  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 1 km di equator  |
+| Resolusi sementara  | 16-hari.  |
 | Format  | GeoTIFF  |
 | Unit  | n/a  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the VHI can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk VHI dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|

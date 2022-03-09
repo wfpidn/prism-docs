@@ -1,3 +1,3 @@
 * Language
-  * [:us: EN](/)
-  * [:indonesia: ID](/id/)
+  * [:indonesia: ID](/)
+  * [:us: EN](/en/)

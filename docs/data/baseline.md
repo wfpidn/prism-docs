@@ -1,34 +1,34 @@
 # Baseline
 
-An effective disaster management system requires collection of baseline data that is comprehensive, accurate, timely, and accessible. Without these characteristics, an effective, economical, and task- oriented disaster management system cannot be achieved. This section focuses on baseline data collection and impact calculation for specific disasters, which can be defined as the scope and nature of the overall informational resources needed to prepare for and respond to a variety of disasters. What is presently required is a clear understanding of the characteristics of current information resources, their functional capabilities, and their use for disaster management.
+Sistem penanggulangan bencana yang efektif memerlukan pengumpulan data dasar yang komprehensif, akurat, tepat waktu, dan dapat diakses. Tanpa karakteristik tersebut, sistem penanggulangan bencana yang efektif, ekonomis, dan berorientasi pada tugas tidak dapat dicapai. Bagian ini berfokus pada pengumpulan data dasar dan perhitungan dampak untuk bencana tertentu, yang dapat didefinisikan sebagai ruang lingkup dan sifat dari keseluruhan sumber informasi yang diperlukan untuk mempersiapkan dan menanggapi berbagai bencana. Yang dibutuhkan saat ini adalah pemahaman yang jelas tentang karakteristik sumber daya informasi saat ini, kemampuan fungsionalnya, dan penggunaannya untuk manajemen bencana.
 
-## Population
+## Populasi
 
-Global mapping of population is rapidly growing in recent years. They are available at detailed spatial scales. The analysis is based on satellite or other geospatial data layers. Population data are necessary for the analysis of impacts of population growth, monitor population changes, and intervention planning.
+Pemetaan populasi global berkembang pesat dalam beberapa tahun terakhir. Mereka tersedia pada skala spasial rinci. Analisis didasarkan pada satelit atau lapisan data geospasial lainnya. Data kependudukan diperlukan untuk analisis dampak pertumbuhan penduduk, pemantauan perubahan penduduk, dan perencanaan intervensi.
 
-### Landscan
+### Pemindaian
 
-The LandScan Global Population Database is developed at the Department of Energy's [Oak Ridge National Laboratory](https://landscan.ornl.gov). The data represents finest resolution global population distribution database available. LandScan is known as a highly practical application in humanitarian affairs because it provides most reliable population distribution model.
+Basis Data Pemindaian Populasi Global dikembangkan di Departemen Energi [Laboratorium Nasional Oak Ridge](https://landscan.ornl.gov). Data tersebut mewakili database distribusi populasi global resolusi terbaik yang tersedia. LandScan dikenal sebagai aplikasi yang sangat praktis dalam urusan kemanusiaan karena menyediakan model distribusi penduduk yang paling dapat diandalkan.
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Visualized population density on the dashboard  |
-| Variable  | Total population  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | The 30 arc-second cell, or 0.008333333 decimal degrees, represents approximately 1 km2 near the equator  |
-| Temporal resolution  | Annual  |
-| Format  | ESRI grid format and an ESRI binary raster format  |
-| Unit  | The values of the cells are integer population counts representing an average, or ambient, population distribution  |
-| Source  | https://landscan.ornl.gov/landscan-datasets  |
-| Reference  | https://landscan.ornl.gov/documentation  |
+| Fungsi  | Kepadatan populasi yang divisualisasikan di dasbor  |
+| Variabel  | Total populasi  |
+| Cakupan Geografis | Global  |
+| Resolusi Spasial | Cell berukuran 30 arc-second, or 0.008333333 derajat desimal, mewakili sekitar 1 km2 di dekat khatulistiwa  |
+| Resolusi sementara  | Tahunan  |
+| Format  | Format grid ESRI dan format raster biner ESRI  |
+| Unit  | Nilai cell adalah jumlah populasi bilangan bulat yang mewakili rata-rata atau ambien dari distribusi populasi  |
+| Sumber  | https://landscan.ornl.gov/landscan-datasets  |
+| Referensi  | https://landscan.ornl.gov/documentation  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the Landscan population density can follow below colorcodes and image.
+?> Ambang batas dan simbologi pemindaian kepadatan penduduk dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| No population  | `#c2c3c6` ![#c2c3c6](https://via.placeholder.com/15/c2c3c6/000000?text=+) | rgb(194, 195, 198)  |
+| Tidak ada populiasi  | `#c2c3c6` ![#c2c3c6](https://via.placeholder.com/15/c2c3c6/000000?text=+) | rgb(194, 195, 198)  |
 | 1 to 5  | `#fbf6c2` ![#fbf6c2](https://via.placeholder.com/15/fbf6c2/000000?text=+)  | rgb(251, 246, 194)  |
 | 6 - 25  | `#f6ef8d` ![#f6ef8d](https://via.placeholder.com/15/f6ef8d/000000?text=+)  | rgb(246, 239, 141)  |
 | 26 - 50  | `#f4e957` ![#f4e957](https://via.placeholder.com/15/f4e957/000000?text=+)  | rgb(244, 233, 87)  |
@@ -42,56 +42,56 @@ The LandScan Global Population Database is developed at the Department of Energy
 
 ### Facebook
 
-To create high-resolution population maps, Facebook use machine learning techniques to identify buildings from commercially available satellite images. Then work with partners at Columbia University to overlay general population estimates based on publicly available census data and other population statistics. The resulting maps are the most detailed and actionable tools available for aid and research organizations.
+Untuk membuat peta populasi resolusi tinggi, Facebook menggunakan teknik pembelajaran mesin untuk mengidentifikasi bangunan dari citra satelit yang tersedia secara komersial. Kemudian bekerja dengan mitra di Universitas Columbia untuk melapisi perkiraan populasi umum berdasarkan data sensus yang tersedia untuk umum dan statistik populasi lainnya. Peta yang dihasilkan adalah alat yang paling rinci dan dapat ditindaklanjuti yang tersedia untuk organisasi bantuan dan penelitian.
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | a proxy for impact analysis  |
-| Variable  | Total population, Men, Women, Under 5, Youth 15-24, Women of reproductive ages 15-49, Elderly 60+  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 30 meter/pixel  |
-| Temporal resolution  | n/a (Year estimation is 2019)  |
+| Fungsi  | proxy untuk analisis dampak  |
+| Variabel  | Jumlah penduduk, Pria, Wanita, Balita, Remaja 15-24, Wanita usia subur 15-49, Lansia 60+  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 30 meter/pixel  |
+| Resolusi sementara  | t/a (Estimasi tahun 2019)  |
 | Format  | GeoTIFF  |
-| Unit  | Population counts at 30m resolution  |
-| Source  | https://data.humdata.org/organization/facebook  |
-| Reference  | https://dataforgood.fb.com/docs/high-resolution-population-density-maps-demographic-estimates-documentation/  |
+| Unit  | Jumlah populasi pada resolusi 30m  |
+| Sumber  | https://data.humdata.org/organization/facebook  |
+| Referensi  | https://dataforgood.fb.com/docs/high-resolution-population-density-maps-demographic-estimates-documentation/  |
 
 
-## Croplands
+## Lahan pertanian
 
-Land cover maps represent spatial information on different types (classes) of physical coverage of the Earth's surface, e.g. forests, grasslands, croplands, lakes, wetlands. Cropland includes areas used for the production of adapted crops for harvest. Two subcategories of cropland are recognized: cultivated and non-cultivated. Cultivated cropland comprises land in row crops or close-grown crops and also other cultivated cropland, for example, hay land or pasture land that is in a rotation with row or close-grown crops. Non-cultivated cropland includes permanent hay land and horticultural cropland.
+Peta tutupan lahan mewakili informasi spasial pada berbagai jenis (classes) tutupan fisik permukaan bumi, mis. hutan, padang rumput, lahan pertanian, danau, lahan basah. Lahan pertanian mencakup area yang digunakan untuk produksi tanaman yang disesuaikan untuk panen. Dua subkategori lahan pertanian diakui: dibudidayakan dan non-digarap. Lahan pertanian yang dibudidayakan terdiri dari lahan untuk tanaman baris atau tanaman jarak dekat dan juga lahan tanaman budidaya lainnya, misalnya, lahan jerami atau lahan penggembalaan yang bergiliran dengan tanaman baris atau tanaman jarak dekat. Lahan pertanian non-budidaya meliputi lahan jerami permanen dan lahan pertanian hortikultura.
 
 ### GFSAD30
 
-The [GFSAD30](https://geography.wr.usgs.gov/science/croplands/index.html) is a NASA-funded project to provide high-resolution global cropland data and their water use that contributes towards global food security in the twenty-first century. The GFSAD30 products are derived through multi-sensor remote sensing data (e.g., Landsat, MODIS, AVHRR), secondary data, and field-plot data and aims at documenting cropland dynamics from 1990 to 2017.
+[GFSAD30](https://geography.wr.usgs.gov/science/croplands/index.html) adalah proyek yang didanai NASA untuk menyediakan data lahan pertanian global beresolusi tinggi dan penggunaan airnya yang berkontribusi terhadap ketahanan pangan global di abad kedua puluh satu. Produk GFSAD30 diturunkan melalui data penginderaan jauh multi-sensor (misalnya, Landsat, MODIS, AVHRR), data sekunder, dan data plot lapangan dan bertujuan untuk mendokumentasikan dinamika lahan pertanian dari tahun 1990 hingga 2017.
 
-| Characteristic  | Description  |
+| Karakterisik | Deskripsi |
 |---|---|
-| Function  | a proxy for impact analysis  |
-| Variable  | Crop extent  |
-| Geographic coverage  | Global  |
-| Spatial resolution  | 30 meter/pixel  |
-| Temporal resolution  | n/a (Year estimation is 2015)  |
+| Fungsi | proxy untuk analisis dampak  |
+| Variabel  | Luas tanaman  |
+| Cakupan Geografis  | Global  |
+| Resolusi Spasial  | 30 meter/pixel  |
+| Resolusi sementara | t/a (Estimasi tahun 2015)  |
 | Format  | GeoTIFF  |
-| Unit  | n/a  |
-| Source  | [Southeast and Northeast Asia](https://lpdaac.usgs.gov/products/gfsad30seacev001/)  |
-| Reference  | https://lpdaac.usgs.gov/documents/168/GFSAD30SEACE_User_Guide_V1.pdf  |
+| Unit  | t/a  |
+| Sumber  | [Southeast and Northeast Asia](https://lpdaac.usgs.gov/products/gfsad30seacev001/)  |
+| Referensi  | https://lpdaac.usgs.gov/documents/168/GFSAD30SEACE_User_Guide_V1.pdf  |
 
 
 ### MODIS
 
-MODIS global croplands extent datasets utilized 250m MODIS (MODerate Resolution Imaging Spectroradiometer) data to map global production cropland extent. A set of multi-year MODIS metrics incorporating four MODIS land bands, NDVI (Normalized Difference Vegetation Index) and thermal data was employed to depict cropland phenology over the period 2000-2008.
+Dataset luasan lahan pertanian global MODIS menggunakan 250m data MODIS (MODerate Resolution Imaging Spectroradiometer) untuk memetakan luas lahan pertanian produksi global. Satu set metrik MODIS multi-tahun yang menggabungkan empat pita tanah MODIS, NDVI (Normalized Difference Vegetation Index) dan data termal digunakan untuk menggambarkan fenologi lahan pertanian selama periode 2000-2008.
 
-With a spatial resolution of 250m, the Global Cropland Extent product represents the finest-scale global cropland map derived using synoptic inputs, and due to the inclusion of 9 years of MODIS data it is designed to be relatively insensitive to inter-annual variability in depicting core cropland production areas. 
+Dengan resolusi spasial 250m, produk luas lahan tanaman global mewakili peta lahan pertanian global skala terbaik yang diturunkan menggunakan input sinoptik, dan karena dimasukkannya data MODIS 9 tahun, peta ini dirancang untuk relatif tidak sensitif terhadap variabilitas antar-tahunan di menggambarkan area produksi lahan pertanian inti.
 
-| Characteristic  | Cropland Probability  | Discrete Cropland/Non-Cropland  |
+| Karakterisik  | Probabilitas Lahan Pertanian  | Lahan Pertanian/Non-Pertanian Terpisah  |
 |---|---|---|
-| Function  | a proxy for impact analysis  | a proxy for impact analysis  |
-| Variable  | Crop extent  | Crop extent  |
-| Geographic coverage  | Global  | Global  |
-| Spatial resolution  | 250 meter/pixel  | 250 meter/pixel  |
-| Temporal resolution  | n/a (Year estimation is 2010)  | n/a (Year estimation is 2010)  |
+| Fungsi  | proxy untuk analisis dampak  | proxy untuk analisis dampak  |
+| Variabel  | Luas tanaman  | Luas tanaman  |
+| Cakupan Geografis  | Global  | Global  |
+| Resolusi Spasial  | 250 meter/pixel  | 250 meter/pixel  |
+| Resolusi sementara  | t/a (Estimasi tahun 2010)  | t/a (Estimasi tahun 2010)  |
 | Format  | GeoTIFF  | GeoTIFF  |
-| Unit  | Value from 1 to 100 is probability that pixel is production cropland. Value of 0 is water and value of 255 is no data.  | A value of 1 means cropland, 0 means not cropland. A value of 254 means water and 255 is no data.  |
-| Source  | http://glad.geog.umd.edu/dataset/gce/250mprob  | http://glad.geog.umd.edu/dataset/gce/modis-global-crop-extent-discrete-croplandnot-cropland-data  |
-| Reference  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  |
+| Unit  | Nilai dari 1 sampai 100 adalah probabilitas bahwa piksel adalah lahan pertanian produksi. Nilai 0 adalah air dan nilai 255 adalah data.  | Nilai 1 berarti lahan pertanian, 0 berarti bukan lahan pertanian. Nilai 254 berarti air dan 255 bukan data.  |
+| Sumber  | http://glad.geog.umd.edu/dataset/gce/250mprob  | http://glad.geog.umd.edu/dataset/gce/modis-global-crop-extent-discrete-croplandnot-cropland-data  |
+| Referensi  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  | http://glad.geog.umd.edu/dataset/gce/global-cropland-extent  |

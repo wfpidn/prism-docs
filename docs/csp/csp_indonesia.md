@@ -1,41 +1,41 @@
-# Indonesia: Product
+# Produk spesifik Indonesia
 
-Mapping the extent of a natural hazard (e.g., assessing areas with a high risk) or disaster is a first step in disaster risk management and emergency response. Subsequently, exposure mapping enables the estimation of the impact of hazards or disasters, for example, regarding the number of affected inhabitants or infrastructure. 
+Pemetaan tingkat bahaya alam (misalnya, menilai daerah dengan risiko tinggi) atau bencana adalah langkah pertama dalam manajemen risiko bencana dan tanggap darurat. Selanjutnya, pemetaan keterpaparan memungkinkan estimasi dampak bahaya atau bencana, misalnya mengenai jumlah penduduk atau infrastruktur yang terkena dampak.
 
-This section describes in detail the methodology and analysis operations required to meet the user requirements of WFP at country or regional level. This is based on extensive search from related journal for impact calculation during the disaster and availability global free data on internet. 
+Bagian ini menjelaskan secara rinci metodologi dan operasi analisis yang diperlukan untuk memenuhi persyaratan pengguna WFP di tingkat negara atau regional. Hal ini didasarkan pada pencarian ekstensif dari jurnal terkait untuk perhitungan dampak selama bencana dan ketersediaan data gratis global di internet.
 
-## Consecutive Dry Days
+## Hari Kering Berturut-turut
 
-The number of consecutive dry days (CDD) is the largest number of consecutive days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the drought level.
+Jumlah hari kering berturut-turut (CDD) adalah jumlah hari berturut-turut terbesar dengan jumlah curah hujan harian kurang dari 1 mm (atau tergantung pada kriteria hari hujan negara), dalam waktu tertentu. Biasanya proses menghitung jumlah hari dalam 90 hari terakhir untuk mengukur tingkat kekeringan.
 
-### How it works
+### Bagaimana ini bekerja
 
-Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a rain day or the most recent consecutive string of days that meet the threshold criteria is summed.
+Hitung jumlah hari hujan berdasarkan ambang batas dan hitung jumlah hari terakhir sejak hari hujan atau rangkaian hari terakhir berturut-turut yang memenuhi kriteria ambang dijumlahkan.
 
-Threshold criteria: 1, 2.5, 5, 10 and 20 milimeters of rainfall
+Kriteria ambang batas: 1, 2.5, 5, 10 dan 20 milimeter curah hujan
 
 ```
 IF previousCDD == null THEN previousCDD == 0
 ELSEIF todayRAIN > 1 AND previousCDD == 0 THEN previousCDD + 1
 ```
 
-CDD derived from IMERG data
+CDD berasal dari data IMERG
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays daily CDD  |
-| Variable  | CDD  |
-| Geographic coverage  | Indonesia 7N-12S, 94E-142E |
-| Spatial resolution  | 0.1 degree ~ 11.1 km at equator  |
-| Temporal resolution  | Daily  |
+| Fungsi  | Menampilkan CDD harian  |
+| Variabel  | CDD  |
+| Cakupan Geografis  | Indonesia 7N-12S, 94E-142E |
+| Resolusi Spasial  | 0.1 derajat ~ 11.1 km di equator  |
+| Resolusi sementara  | Harian  |
 | Format  | GeoTIFF  |
-| Unit  | Number of day  |
+| Unit  | Jumlah hari  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the CDD can follow below color codes and image.
+?> Ambang batas dan simbologi untuk CDD dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -48,38 +48,38 @@ CDD derived from IMERG data
 | Extreme Drought  | +60  | `#a60f14` ![#a60f14](https://via.placeholder.com/15/a60f14/000000?text=+)  | rgb(166, 15, 20)  |
 
 
-## Consecutive Wet Days
+## Hari Basah Berturut-turut
 
-The number of consecutive wet days (CWD) is similar to the above CDD, the largest number of consecutive days with daily precipitation amount more than 1 mm (or depend on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the wet level.
+Jumlah hari hujan berturut-turut (CWD) serupa dengan CDD di atas, jumlah hari berturut-turut terbesar dengan jumlah curah hujan harian lebih dari 1 mm (atau tergantung pada kriteria hari hujan negara), dalam waktu tertentu. Biasanya proses menghitung jumlah hari dalam 90 hari terakhir untuk mengukur tingkat kebasahan.
 
-### How it works
+### Bagaimana ini bekerja
 
-Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a dry day or the most recent consecutive string of days that meet the threshold criteria is summed.
+Hitung jumlah hari hujan berdasarkan ambang batas dan hitung jumlah hari terakhir sejak hari kering atau rangkaian hari terakhir berturut-turut yang memenuhi kriteria ambang dijumlahkan.
 
-Threshold criteria: 1, 2.5, 5, 10 and 20 milimeters of rainfall
+Kriteria ambang batas: 1, 2.5, 5, 10 dan 20 milimeter curah hujan
 
 ```
 IF previousCWD == null THEN previousCWD == 0
 ELSEIF todayRAIN < 1 AND previousCWD == 0 THEN previousCWD + 1
 ```
 
-CWD derived from IMERG data
+CWD berasal dari data IMERG
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays daily CWD  |
-| Variable  | CWD  |
-| Geographic coverage  | Indonesia 7N-12S, 94E-142E |
-| Spatial resolution  | 0.1 degree ~ 11.1 km at equator  |
-| Temporal resolution  | Daily  |
+| Fungsi  | Menamilkan CWD harian |
+| Variabel  | CWD  |
+| Cakupan Geografis  | Indonesia 7N-12S, 94E-142E |
+| Resolusi Spasial  | 0.1 derajat ~ 11.1 km di equator  |
+| Resolusi sementara  | Harian  |
 | Format  | GeoTIFF  |
-| Unit  | Number of day  |
+| Unit  | Jumlah hari  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the CWD can follow below color codes and image.
+?> Ambang batas dan simbologi untuk CWD dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -92,37 +92,37 @@ CWD derived from IMERG data
 | Extreme Wet  | +60  | `#253494` ![#253494](https://via.placeholder.com/15/253494/000000?text=+)  | rgb(37, 52, 148)  |
 
 
-## EVI anomaly
+## Anomali EVI
 
-The objective is to evaluate the monthly deviation of vegetation over the country. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). Enhanced Vegetation Index (EVI) is used instead of the Normalized Difference Vegetation Index (NDVI) as it is more sensitive to changes in areas having high biomass, it reduces the influence of atmospheric conditions on vegetation index values, and it corrects for canopy background signals. 
+Tujuannya adalah untuk mengevaluasi penyimpangan bulanan vegetasi di seluruh negeri. Hal ini dicapai melalui analisis Anomali, (yaitu perbandingan terhadap referensi). Enhanced Vegetation Index (EVI) digunakan sebagai ganti Normalized Difference Vegetation Index (NDVI) karena lebih sensitif terhadap perubahan di area yang memiliki biomassa tinggi, mengurangi pengaruh kondisi atmosfer pada nilai indeks vegetasi, dan mengoreksi sinyal latar belakang kanopi .
 
-The anomaly is calculated based on percentage of the average
+Anomali dihitung berdasarkan persentase rata-rata
 
-Anomaly (%) = $100$ * $\dfrac{x_i}{x_j}$
+Anomali (%) = $100$ * $\dfrac{x_i}{x_j}$
 
-where $x_i$ is current EVI and $x_j$ is long-term average of EVI.
+dimana $x_i$ adalah EVI saat ini dan $x_j$ adalah rata-rata jangka panjang dari EVI.
 
-EVI anomaly derived from MODIS MOD13Q1 data
+Anomali EVI berasal dari data MODIS MOD13Q1
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 16-days EVI anomaly data  |
-| Variable  | EVI anomaly  |
-| Geographic coverage  | Indonesia 7N-12S, 94E-142E  |
-| Spatial resolution  | 250m at equator  |
-| Temporal resolution  | 16-days.  |
+| Fungsi  | Menampilkan data anomali EVI 16 hari  |
+| Variabel  | Anomali EVI  |
+| Cakupan Geografis  | Indonesia 7N-12S, 94E-142E  |
+| Resolusi Spasial  | 250m di equator  |
+| Resolusi sementara  | 16-hari.  |
 | Format  | GeoTIFF  |
-| Unit  | Percent (%)  |
+| Unit  | Persen (%)  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the `16-days` EVI anomaly can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk anomali EVI `16-hari` dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| 50% and below  | `#6a2b0e` ![#6a2b0e](https://via.placeholder.com/15/6a2b0e/000000?text=+) | rgb(106, 43, 14)  |
+| 50% ke bawah  | `#6a2b0e` ![#6a2b0e](https://via.placeholder.com/15/6a2b0e/000000?text=+) | rgb(106, 43, 14)  |
 | 50 to 70%  | `#e06c2c` ![#e06c2c](https://via.placeholder.com/15/e06c2c/000000?text=+)  | rgb(224, 108, 44)  |
 | 70 to 80%  | `#ebb049` ![#ebb049](https://via.placeholder.com/15/ebb049/000000?text=+)  | rgb(235, 176, 73)  |
 | 80 to 90%  | `#e5db9e` ![#e5db9e](https://via.placeholder.com/15/e5db9e/000000?text=+)  | rgb(229, 219, 158)  |
@@ -130,51 +130,51 @@ EVI anomaly derived from MODIS MOD13Q1 data
 | 110 to 120%  | `#d6fb57` ![#d6fb57](https://via.placeholder.com/15/d6fb57/000000?text=+)  | rgb(214, 251, 87)  |
 | 120 to 130%  | `#6fec48` ![#6fec48](https://via.placeholder.com/15/6fec48/000000?text=+)  | rgb(111, 236, 72)  |
 | 130 to 150%  | `#3f8b48` ![#3f8b48](https://via.placeholder.com/15/3f8b48/000000?text=+)  | rgb(63, 139, 39)  |
-| 150% and above  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
+| 150% ke atas  | `#1e4b10` ![#1e4b10](https://via.placeholder.com/15/1e4b10/000000?text=+)  | rgb(30, 75, 16)  |
 
 
 
-## Impact analysis
+## Analisis dampak
 
-Over the last decade, more than 16 600 natural disasters occurred in Indonesia, with an average 1700 disasters annually. Hydro-meteorological weather events cause 95 percent of these disasters, with floods, landslides and strong winds occurring most frequently. 
+Selama satu dekade terakhir, lebih dari 16.600 bencana alam terjadi di Indonesia, dengan rata-rata 1700 bencana setiap tahunnya. Peristiwa cuaca hidrometeorologi menyebabkan 95 persen dari bencana ini, dengan banjir, tanah longsor dan angin kencang yang paling sering terjadi.
 
-Indonesia’s food systems are frequently disrupted by natural disasters. Apart from causing high human, environmental and economic costs, these extreme weather events can stress food and nutrition security, through adverse effects on food availability and access, and on nutrition situation. Extreme weather and natural disasters destroy assets, land, crops, livestock and food stock. They often make markets and supplies unreachable or unaffordable.
+Sistem pangan Indonesia sering terganggu oleh bencana alam. Selain menyebabkan biaya manusia, lingkungan dan ekonomi yang tinggi, peristiwa cuaca ekstrem ini dapat menekan ketahanan pangan dan gizi, melalui efek buruk pada ketersediaan dan akses pangan, dan pada situasi gizi. Cuaca ekstrem dan bencana alam menghancurkan aset, tanah, tanaman, ternak, dan stok makanan. Mereka sering membuat pasar dan persediaan tidak terjangkau atau tidak terjangkau.
 
-However, despite the importance of assessing the impacts of damages and losses in the aftermath of such events, estimating impacts is timely and challenging. 
-By automating data acquisition and processing, the VAMPIRE platform provides immediate estimates of: 
-- The priority areas that are likely affected by floods or drought; 
-- Number of people that is likely affected by floods and drought, and
-- Crops that are likely affected by floods and drought (in hectares). 
+Namun, terlepas dari pentingnya menilai dampak kerusakan dan kerugian setelah peristiwa tersebut, memperkirakan dampak tepat waktu dan menantang.
+Dengan mengotomatiskan akuisisi dan pemrosesan data, platform VAMPIRE memberikan perkiraan langsung tentang:
+- Daerah prioritas yang kemungkinan terkena banjir atau kekeringan;
+- Jumlah orang yang kemungkinan besar terkena dampak banjir dan kekeringan, dan
+- Tanaman yang kemungkinan terkena banjir dan kekeringan (dalam hektar).
 
-The drought estimates are available in near-real time (1 day ago from today); while flood impact estimates are provided 3 days ahead. 
+Perkiraan kekeringan tersedia dalam waktu hampir nyata (1 hari yang lalu dari hari ini); sedangkan perkiraan dampak banjir diberikan 3 hari ke depan.
 
-The impact estimates presented in the system use spatial analysis done by overlaying (1) estimated geographic area exposed to dry (drought) or wet (flood) season, with (2) number of people in the affected area or crop area in the affected zone. 
+Estimasi dampak yang disajikan dalam sistem menggunakan analisis spasial yang dilakukan dengan overlay (1) perkiraan area geografis yang terkena musim kemarau (kekeringan) atau basah (banjir), dengan (2) jumlah orang di area yang terkena dampak atau area tanaman di zona yang terkena dampak.
 
-### Dry Season
+### Musim kemarau
 
-#### Population
+#### Populasi
 
-Impact on population shows the number of people living in an area that has been exposed to extreme drought in the past 90 days. The indicator overlays population density with the extreme drought exposure defined by number of days since last rainfall (for extreme drought, it is more than consecutive 60 days without rain). 
+Dampak terhadap penduduk menunjukkan jumlah penduduk yang tinggal di suatu wilayah yang terkena kekeringan ekstrem dalam 90 hari terakhir. Indikator tersebut menutupi kepadatan penduduk dengan paparan kekeringan ekstrem yang ditentukan oleh jumlah hari sejak curah hujan terakhir (untuk kekeringan ekstrem, lebih dari 60 hari berturut-turut tanpa hujan).
 
-Data for the drought exposure is derived from the days since last rain indicator from the Integrated Multi-satellitE Retrievals for GPM (IMERG) dataset. Population density is derived from the Facebook dataset. 
+Data paparan kekeringan diperoleh dari hari-hari sejak indikator hujan terakhir dari kumpulan data Integrated Multi-satelitE Retrievals for GPM (IMERG). Kepadatan populasi berasal dari dataset Facebook.
 
-#### Crops
+#### Tanaman-tanaman
 
-The Crops affected layer refers to a crop area (in hectares) that has been exposed to extreme drought in the past 16 days. The indicator combines the exposure of an area to extreme drought (defined as less than 10 of VHI value) and a crop mask in the exposed area. The identified areas are at a risk of drought impact on crops. 
+Lapisan tanaman yang terkena dampak mengacu pada area tanaman (dalam hektar) yang telah terkena kekeringan ekstrim dalam 16 hari terakhir. Indikator ini menggabungkan keterpaparan suatu area terhadap kekeringan ekstrem (didefinisikan sebagai nilai VHI kurang dari 10) dan masker tanaman di area yang terpapar. Daerah yang teridentifikasi berada pada risiko dampak kekeringan pada tanaman.
 
-Data for the drought exposure is derived from the Vegetation Health Index from MODIS dataset. Crop extent uses the MODIS crop mask.
+Data untuk paparan kekeringan berasal dari Vegetation Health Index dari dataset MODIS. Luas tanaman menggunakan topeng tanaman MODIS.
 
-### Wet Season
+### Musim hujan
 
-#### Population
+#### Populasi
 
-Impact on population shows the number of people living in an area which is forecasted to be affected by extreme rainfall that could trigger a floods in the next 1 to 5 days. The indicator overlays population density with the extreme rainfall triggering flood forecast for all alert categories to calculate the number of people affected by flood. 
+Dampak terhadap penduduk menunjukkan jumlah penduduk yang tinggal di suatu wilayah yang diperkirakan akan terkena curah hujan ekstrim yang dapat memicu banjir dalam 1 sampai 5 hari ke depan. Indikator tersebut menutupi kepadatan penduduk dengan curah hujan ekstrim yang memicu prakiraan banjir untuk semua kategori waspada untuk menghitung jumlah orang yang terkena dampak banjir.
 
-Data for extreme rainfall forecast is derived from the NOAA Global Forecast System and NASA GPM IMERG. Population density is derived from the Facebook dataset. 
+Data untuk prakiraan curah hujan ekstrim berasal dari NOAA Global Forecast System dan NASA GPM IMERG. Kepadatan populasi berasal dari dataset Facebook.
 
-#### Crops
+#### Tanaman-tanaman
 
-The layer refers to a crop area (in hectares) which is forecasted to be affected by extreme rainfall that could trigger a floods in the next 1 to 5 days. The indicator overlays population density with the extreme rainfall triggering flood forecast for all alert categories with a crop mask for the area with detected alert in the next 1 to 5 days.  
+Lapisan tersebut mengacu pada luas tanaman (dalam hektar) yang diperkirakan akan terkena curah hujan ekstrim yang dapat memicu banjir dalam 1 hingga 5 hari ke depan. Indikator tersebut menutupi kepadatan penduduk dengan curah hujan ekstrem yang memicu prakiraan banjir untuk semua kategori peringatan dengan crop mask untuk area dengan peringatan yang terdeteksi dalam 1 hingga 5 hari ke depan.
 
-Data for extreme rainfall is derived from the NOAA Global Forecast System and NASA GPM IMERG. Crop extent uses the MODIS crop mask.
+Data curah hujan ekstrim berasal dari NOAA Global Forecast System dan NASA GPM IMERG. Luas tanaman menggunakan topeng tanaman MODIS.
 

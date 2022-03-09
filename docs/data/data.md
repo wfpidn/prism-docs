@@ -1,24 +1,24 @@
 # Data
 
-PRISM hosts an extensive set of data related to climate, temperature, vegetation, cropland, population, socio-economic and food security. Some data are originally developed by WFP and partner organizations. Other data are available in public domain and developed by governments, NGOs, and/or companies. The data vary in accuracy, resolution, frequency of update, and geographic coverage. Data summary below mainly highlights the format, methods and technicalities (links to the sources provided). Full download of the datasets is available for most sources.
+PRISM menampung sekumpulan data ekstensif yang terkait dengan iklim, suhu, vegetasi, lahan pertanian, populasi, sosio-ekonomi, dan ketahanan pangan. Beberapa data awalnya dikembangkan oleh WFP dan organisasi mitra. Data lain tersedia dalam domain publik dan dikembangkan oleh pemerintah, LSM, dan/atau perusahaan. Data bervariasi dalam akurasi, resolusi, frekuensi pembaruan, dan cakupan geografis. Ringkasan data di bawah ini terutama menyoroti format, metode, dan teknis (tautan ke sumber yang disediakan). Unduhan lengkap kumpulan data tersedia untuk sebagian besar sumber.
 
-Learn more about PRISM's commitment to high quality and open data.
+Pelajari lebih lanjut tentang komitmen PRISM terhadap kualitas tinggi dan data terbuka.
 
-### Data Standards
+### Standar Data
 
-PRISM is committed to providing highest quality and latest available data on the impact of climate hazards on the most vulnerable communities. All data available have been verified and classified with respect to its quality, timeliness, accuracy, completeness, geographic coverage and objectivity. In some cases, the best available data are still imperfect. In those cases, we will add a notification on the fallacies.
+PRISM berkomitmen untuk menyediakan kualitas tertinggi dan data terbaru yang tersedia tentang dampak bahaya iklim pada komunitas yang paling rentan. Semua data yang tersedia telah diverifikasi dan diklasifikasikan sehubungan dengan kualitas, ketepatan waktu, akurasi, kelengkapan, cakupan geografis, dan objektivitasnya. Dalam beberapa kasus, data terbaik yang tersedia masih belum sempurna. Dalam kasus tersebut, kami akan menambahkan pemberitahuan tentang kekeliruan.
 
-### Open Data Policy
+### Kebijakan Data Terbuka
 
-PRISM is committed to provide an open, downloadable and useful data. We believe that open data amplify rapid improvement in innovation, information sharing, analysis and transparency which are important to support [SDG 2](https://www.wfp.org/zero-hunger). For datasets retrieved from other sources, please refer to the original sources accordingly.
+PRISM berkomitmen untuk menyediakan data yang terbuka, dapat diunduh, dan bermanfaat. Kami percaya bahwa data terbuka memperkuat peningkatan pesat dalam inovasi, berbagi informasi, analisis, dan transparansi yang penting untuk mendukung [SDG 2](https://www.wfp.org/zero-hunger). Untuk kumpulan data yang diambil dari sumber lain, silakan merujuk ke sumber aslinya.
 
 
-### Data Sharing
+### Berbagi Data
 
-TERM OF USE
+SYARAT PENGGUNAAN
 
- - Use. You are free to use, distribute, copy, modify and display the outputs of PRISM for commercial and non-commercial purposes. This includes datasets as well as maps.<br>
- - Attribution. You must clearly attribute the work and provide a link back to PRISM website for each individual dataset or map used. By doing so, you will ensure that people access the latest available information if any revision or correction made to the data or map. However, some content of PRISM may carry additional copyright restrictions. PRISM made the best effort to clearly label such content.<br>
- - Pictures. Most of pictures featured on PRISM have either license under transferable terms or obtained via picture-sharing sites that have their own policies for public use. Unless indicated otherwise, attribution above does not apply to pictures on PRISM.<br>
- - Charts and graphs. Charts and graphs resulted from the analysis in PRISM are free to use. Though, please refer to the article on attribution above.<br>
- - If you have any questions related to citation or re-use of PRISM contents, please [contact us](../overview/contact.md)
+ - Menggunakan. Anda bebas menggunakan, mendistribusikan, menyalin, memodifikasi dan menampilkan output PRISM untuk tujuan komersial dan non-komersial. Ini termasuk kumpulan data serta peta.<br>
+ - Atribusi. Anda harus dengan jelas mengaitkan pekerjaan tersebut dan memberikan tautan kembali ke situs web PRISM untuk setiap kumpulan data atau peta yang digunakan. Dengan demikian, Anda akan memastikan bahwa orang mengakses informasi terbaru yang tersedia jika ada revisi atau koreksi yang dilakukan pada data atau peta. Namun, beberapa konten PRISM mungkin membawa batasan hak cipta tambahan. PRISM melakukan upaya terbaik untuk memberi label dengan jelas pada konten tersebut.<br>
+ - Foto-foto. Sebagian besar gambar yang ditampilkan di PRISM memiliki lisensi di bawah persyaratan yang dapat dialihkan atau diperoleh melalui situs berbagi gambar yang memiliki kebijakan sendiri untuk penggunaan umum. Kecuali dinyatakan lain, atribusi di atas tidak berlaku untuk gambar di PRISM.<br>
+ - Bagan dan grafik. Bagan dan grafik yang dihasilkan dari analisis di PRISM bebas untuk digunakan. Padahal, silakan lihat artikel tentang atribusi di atas.<br>
+ - Jika Anda memiliki pertanyaan terkait kutipan atau penggunaan kembali konten PRISM, silakan [hubungi kami](../about/contact.md)

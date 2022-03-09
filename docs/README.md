@@ -1,11 +1,9 @@
-# Welcome to PRISM
+# Selamat datang di PRISM
 
-The Platform for Real-time Impact and Situation Monitoring (PRISM) is a multi-tier system that fuses satellite precipitation and vegetation data, crowdsourced food price data and household survey data. It provides integrated visualisations of the extent of extreme rainfall, flood and drought affected areas, the impact on food market structure and pricing, and the coping strategies and resilience of affected populations. The system automates data acquisition and processing, ensuring up-to-date information is available to participating organisations and governments.
+Platform for Real-time Impact and Situation Monitoring (PRISM) adalah sistem multi-tier yang menggabungkan data curah hujan dan vegetasi satelit, data harga pangan (crowdsourced) dan data survei rumah tangga. Sistem ini memberikan visualisasi terintegrasi dari tingkat curah hujan ekstrem, daerah yang terkena banjir dan kekeringan, dampak pada struktur dan harga pasar makanan, dan strategi penanggulangan dan ketahanan populasi yang terkena dampak. Sistem ini mengotomatiskan akuisisi dan pemrosesan data, memastikan informasi terkini tersedia untuk organisasi dan pemerintah yang berpartisipasi.
 
-The tool is the result of a collaboration between practitioners in the field of food security and food assistance and data experts working to harness big data for development and humanitarian action. The platform delivers insights for the improved targeting of public policy, as well as, over time, better risk models for the development of mitigation strategies.
+PRISM merupakan hasil kolaborasi antara praktisi di bidang ketahanan pangan dan bantuan pangan dan pakar data yang bekerja untuk memanfaatkan data besar untuk pembangunan dan aksi kemanusiaan. Platform ini memberikan wawasan untuk penargetan kebijakan publik yang lebih baik, serta, seiring waktu, model risiko yang lebih baik untuk pengembangan strategi mitigasi.
 
-The tool can be used to understand the evolving nature of slow onset but medium impact phenomena like [El Niño](https://en.wikipedia.org/wiki/El_Niño) and [La Niña](https://en.wikipedia.org/wiki/La_Niña) in near real-time to better target government and WFP assistance to vulnerable populations.
+Sistem ini dapat digunakan untuk memahami sifat yang berkembang dari fenomena serangan lambat namun berdampak sedang seperti [El Niño](https://en.wikipedia.org/wiki/El_Niño) dan [La Niña](https://en.wikipedia.org/wiki/La_Niña) dalam waktu dekat untuk menargetkan bantuan pemerintah dan WFP dengan lebih baik kepada populasi yang rentan.
 
-This is the single-source of documentation for PRISM. It is intended to be a thorough, living document detailing the background, objective, data, method and output of PRISM. If you find a mistake, please open an issue.
-
-![PRISM](/img/prism.png)
+![PRISM](/img/prism-idn.png)

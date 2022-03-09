@@ -1,76 +1,76 @@
-# Indonesia: Data
+# Data Spesifik Indonesia
 
-## Rainfall
+## Curah hujan
 
-Indonesia used GPM IMERG data to provide near-real time information on extreme rainfall in daily basis and NOAA GEFS for daily rainfall forecast that could trigger a flood. 
+Indonesia menggunakan data GPM IMERG untuk memberikan informasi hampir real-time tentang curah hujan ekstrem setiap hari dan NOAA GEFS untuk prakiraan curah hujan harian yang dapat memicu banjir.
 
 ### GPM IMERG
 
-The GPM is next-generation of the Tropical Rainfall Measuring Mission (TRMM - https://pmm.nasa.gov/TRMM). Like the TRMM, the GPM mission aims at providing uniformly calibrated precipitation estimates at a quasi-global scale by merging the measurements from its constellation of microwave and IR satellites. All GPM data sets including measurements obtained from each platform (Level 2) are available on the PMM site (https://pmm.nasa.gov/data-access). Among many GPM products, the Multi-satellitE Retrievals for GPM (IMERG) is most interesting to the users since it delivers the ‘best’ precipitation estimates by combining data obtained from all available microwave and infrared (IR) platforms of the GPM satellite constellation. 
+GPM adalah generasi berikutnya dari Misi Pengukuran Curah Hujan Tropis (TRMM - https://pmm.nasa.gov/TRMM). Seperti TRMM, misi GPM bertujuan untuk memberikan perkiraan curah hujan yang dikalibrasi secara seragam pada skala kuasi-global dengan menggabungkan pengukuran dari konstelasi satelit microwave dan IR. Semua set data GPM termasuk pengukuran yang diperoleh dari setiap platform (Level 2) tersedia di situs PMM (https://pmm.nasa.gov/data-access). Di antara banyak produk GPM, Multi-satellitE Retrievals for GPM (IMERG) paling menarik bagi pengguna karena memberikan perkiraan curah hujan 'terbaik' dengan menggabungkan data yang diperoleh dari semua platform microwave dan inframerah (IR) yang tersedia dari konstelasi satelit GPM.
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 6-hour and daily precipitation data  |
-| Variable  | Total precipitation  |
-| Geographic coverage  | Global 60N-60S, 180W-180E |
-| Spatial resolution  | 0.1 degree ~ 11.1 km at equator  |
-| Temporal resolution  | 30 minutes and daily  |
+| Fungsi  | Menampilkan data curah hujan 6 jam dan harian  |
+| Variabel  | Jumlah curah hujan  |
+| Cakupan Geografis  | Global 60N-60S, 180W-180E |
+| Resolusi Spasial  | 0.1 derajat ~ 11.1 km di equator  |
+| Resolusi sementara  | 30 menit dan setiap hari  |
 | Format  | NetCDF  |
-| Unit  | Total mm for given time step, mm/hour, mm/day, etc.  |
-| Source  | 30-minutes https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGHH_06/summary and Daily: https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_06/summary  |
-| Reference  | https://pmm.gsfc.nasa.gov/GPM  |
+| Unit  | Total mm untuk langkah waktu tertentu, mm/jam, mm/hari, dll.  |
+| Sumber  | 30 menit https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGHH_06/summary and Daily: https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_06/summary  |
+| Referensi  | https://pmm.gsfc.nasa.gov/GPM  |
 
 ### NOAA GEFS
 
-The Global Ensemble Forecast System (GEFS), previously known as the GFS Global ENSemble (GENS), is a weather forecast model made up of 21 separate forecasts, or ensemble members. The National Centers for Environmental Prediction ([NCEP](https://www.ncep.noaa.gov)) of NOAA started the GEFS to address the nature of uncertainty in weather observations, which is used to initialize weather forecast models. The GEFS attempts to quantify the amount of uncertainty in a forecast by generating an ensemble of multiple forecasts, each minutely different, or perturbed, from the original observations.
+Global Ensemble Forecast System (GEFS), sebelumnya dikenal sebagai GFS Global ENSemble (GENS), adalah model prakiraan cuaca yang terdiri dari 21 prakiraan terpisah, atau anggota ansambel. National Centers for Environmental Prediction ([NCEP](https://www.ncep.noaa.gov)) dari NOAA memulai GEFS untuk mengatasi sifat ketidakpastian dalam pengamatan cuaca, yang digunakan untuk menginisialisasi model prakiraan cuaca. GEFS mencoba untuk mengukur jumlah ketidakpastian dalam prakiraan dengan menghasilkan kumpulan prakiraan ganda, masing-masing sangat berbeda, atau terganggu, dari pengamatan asli.
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 6-hour and daily precipitation forecast  |
-| Variable  | Total precipitation forecast  |
-| Geographic coverage  | Global |
-| Spatial resolution  | 0.25 degree ~ 27.5 km at equator  |
-| Temporal resolution  | Every 6-hour, up to 16-days ahead  |
+| Fungsi  | Menampilkan prakiraan curah hujan 6 jam dan harian  |
+| Variabel  | Prakiraan curah hujan total  |
+| Cakupan Geografis  | Global |
+| Resolusi Spasial  | 0.25 derajat ~ 27.5 km di equator  |
+| Resolusi sementara  | Setiap 6 jam, hingga 16 hari ke depan  |
 | Format  | GRIB2  |
-| Unit  | Total mm/6-hour.  |
-| Source  | https://nomads.ncep.noaa.gov/cgi-bin/filter_gefs_atmos_0p25s.pl  |
-| Reference  | https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-ensemble-forecast-system-gefs  |
+| Unit  | Total mm/6-jam.  |
+| Sumber  | https://nomads.ncep.noaa.gov/cgi-bin/filter_gefs_atmos_0p25s.pl  |
+| Referensi  | https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-ensemble-forecast-system-gefs  |
 
-## Vegetation Indices
+## Indeks Vegetasi
 
-Vegetation indices, usually produced on 8 or 16-day and monthly intervals and at multiple spatial resolutions, provide consistent spatial and temporal comparisons of vegetation canopy greenness, a composite property of leaf area, chlorophyll and canopy structure. Two vegetation indices are derived from atmospherically-corrected reflectance in the red, near-infrared, and blue wavebands; the normalized difference vegetation index (NDVI), and the enhanced vegetation index (EVI), which minimizes canopy-soil variations and improves sensitivity over dense vegetation conditions. The two products more effectively characterize the global range of vegetation states and processes.
+Indeks vegetasi, biasanya diproduksi pada interval 8 atau 16 hari dan bulanan dan pada beberapa resolusi spasial, memberikan perbandingan spasial dan temporal yang konsisten dari kehijauan tajuk vegetasi, properti komposit dari luas daun, klorofil dan struktur kanopi. Dua indeks vegetasi diturunkan dari reflektansi yang dikoreksi secara atmosfer pada pita gelombang merah, inframerah-dekat, dan biru; Normalized Difference Vegetation Index (NDVI), dan Enhanced Vegetation Index (EVI), yang meminimalkan variasi tanah tajuk dan meningkatkan sensitivitas terhadap kondisi vegetasi yang rapat. Kedua produk tersebut secara lebih efektif mencirikan kisaran global keadaan dan proses vegetasi.
 
 ### MODIS
 
-The MOD13Q1 Version 6 product provides Vegetation Index (VI) values at a per pixel basis at 250 meter spatial resolution. There are two primary vegetation layers. The first is the Normalized Difference Vegetation Index (NDVI), which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The second vegetation layer is the Enhanced Vegetation Index (EVI), which has improved sensitivity over high biomass regions. The algorithm for this product chooses the best available pixel value from all the acquisitions from the 16 day period. The criteria used is low clouds, low view angle and the highest NDVI/EVI value. 
+Produk MOD13Q1 Versi 6 memberikan nilai Indeks Vegetasi (VI) pada basis per piksel pada resolusi spasial 250 meter. Ada dua lapisan vegetasi primer. Yang pertama adalah Normalized Difference Vegetation Index (NDVI), yang dirujuk sebagai indeks kontinuitas dari NDVI yang diturunkan dari National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR). Lapisan vegetasi kedua adalah Enhanced Vegetation Index (EVI), yang telah meningkatkan sensitivitas di daerah dengan biomassa tinggi. Algoritme untuk produk ini memilih nilai piksel terbaik yang tersedia dari semua akuisisi dari periode 16 hari. Kriteria yang digunakan adalah awan rendah, sudut pandang rendah dan nilai NDVI/EVI tertinggi.
 
-Enhanced Vegetation Index (EVI) is used instead of the Normalized Difference Vegetation Index (NDVI) as it is more sensitive to changes in areas having high biomass, it reduces the influence of atmospheric conditions on vegetation index values, and it corrects for canopy background signals. 
+Enhanced Vegetation Index (EVI) digunakan sebagai ganti Normalized Difference Vegetation Index (NDVI) karena lebih sensitif terhadap perubahan di area yang memiliki biomassa tinggi, mengurangi pengaruh kondisi atmosfer pada nilai indeks vegetasi, dan mengoreksi sinyal latar belakang kanopi.
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 16-days vegetation indices data  |
-| Variable  | EVI  |
-| Geographic coverage  | Global |
-| Spatial resolution  | 250 meter  |
-| Temporal resolution  | 16-days  |
+| Fungsi  | Menampilkan data indeks vegetasi 16 hari  |
+| Variabel  | EVI  |
+| Cakupan Geografis  | Global |
+| Resolusi Spasial  | 250 meter  |
+| Resolusi sementara  | 16-hari  |
 | Format  | HDF-EOS  |
-| Unit  | n/a, Scale factor 0.0001  |
-| Source  | https://e4ftl01.cr.usgs.gov/MOLT/MOD13Q1.006/  |
-| Reference  | https://lpdaac.usgs.gov/products/mod13q1v006/  |
+| Unit  | n/a, Faktor skala 0.0001  |
+| Sumber  | https://e4ftl01.cr.usgs.gov/MOLT/MOD13Q1.006/  |
+| Referensi  | https://lpdaac.usgs.gov/products/mod13q1v006/  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the `16-days` EVI can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk EVI `16-hari` dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| 0 and below  | `#002596` ![#002596](https://via.placeholder.com/15/002596/000000?text=+) | rgb(0, 37, 150)  |
+| 0 ke bawah  | `#002596` ![#002596](https://via.placeholder.com/15/002596/000000?text=+) | rgb(0, 37, 150)  |
 | 0 to 0.05  | `#752a27` ![#752a27](https://via.placeholder.com/15/752a27/000000?text=+)  | rgb(117, 42, 39)  |
 | 0.06 to 0.10  | `#b4672a` ![#b4672a](https://via.placeholder.com/15/b4672a/000000?text=+)  | rgb(180, 103, 42)  |
 | 0.11 to 0.15  | `#f3a63b` ![#f3a63b](https://via.placeholder.com/15/f3a63b/000000?text=+)  | rgb(243, 166, 59)  |

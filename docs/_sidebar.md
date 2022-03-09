@@ -1,35 +1,20 @@
-* **About PRISM**
-	* [Welcome](README.md)
-	* [History](about/history.md)
-	* [Project](about/project.md)
-	* [Contact](about/contact.md)
-* **Getting started**
-	* [Overview](/help/help.md)
-	* [Step-by-step instructions](/help/step_by_step.md)
-	* [Additional materials](/help/additional_materials.md)
-	* [FAQs](/help/faq.md)
+* **Tentang PRISM**
+	* [Selamat Datang](README.md)
+	* [Sejarah](about/history.md)
+	* [Proyek](about/project.md)
+	* [Kontak](about/contact.md)
 * **Data**
-	* [Overview](/data/data.md)
+	* [Gambaran umum](/data/data.md)
 	* [Baseline](/data/baseline.md)
-	* [Climate](/data/data_climate.md)
-	* [Vegetation](/data/data_vegetation.md)
-	* [Snow](/data/data_snow.md)
-	* [Secondary data](/data/data_secondary.md)
-* **Data: Country-specific**
-	* [Cambodia](/csd/csd_cambodia.md)
+	* [Iklim](/data/data_climate.md)
+	* [Vegetasi](/data/data_vegetation.md)
+	* [Data sekunder](/data/data_secondary.md)
 	* [Indonesia](/csd/csd_indonesia.md)
-	* [Mongolia](/csd/csd_mongolia.md)
-* **Product**
-	* [Overview](/product/product.md)
+* **Produk**
+	* [Gambaran umum](/product/product.md)
 	* [Climate-related hazard](/product/climate_hazard.md)
-	* Impact analysis
-* **Product: Country-specific**
-	* [Cambodia](/csp/csp_cambodia.md)
 	* [Indonesia](/csp/csp_indonesia.md)
-	* [Mongolia](/csp/csp_mongolia.md)
-* **How to setup your own PRISM**
-	* [Overview](/setup/howto.md)
-	* [Backend](/setup/backend.md)
-	* [Frontend](/setup/frontend.md)
-* **API**
-	* [Overview](/api/api.md)
+* **Cara instalasi PRISM**
+	* [Gambaran umum](/setup/howto.md)
+	* [Back-end](/setup/backend.md)
+	* [Front-end](/setup/frontend.md)

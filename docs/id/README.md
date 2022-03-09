@@ -1,3 +1,0 @@
-# Headline ID
-
-> Content ID

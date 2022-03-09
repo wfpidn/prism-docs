@@ -1,3 +1,0 @@
-# Mongolia: Data
-
-## Pasture

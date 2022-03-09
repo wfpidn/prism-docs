@@ -1,37 +1,37 @@
 # Frontend
 
-This is guideline for the PRISM front-end interface. It displays data, forecasts, and impact projections on a configurable map interface.
+Ini adalah pedoman untuk antarmuka front-end PRISM. Ini menampilkan data, prakiraan, dan proyeksi dampak pada antarmuka peta yang dapat dikonfigurasi.
 
-## Functionalities
+## Fungsionalitas
 
-The new PRISM frontend is built as a static website to minimize cross dependencies and simplify deployments as much as possible. Currently, PRISM frontend provides the ability to:
-- Load administrative boundaries as GeoJSON (`src/config/admin_boundaries.json`)
-- Load baseline data as JSON, and link it to administrative boundaries
-- Display WMS layers from Geoserver or Open Data Cube endpoints, with date selection capabilities
-- Display CSV tables in a left side panel
+Frontend PRISM yang baru dibuat sebagai situs web statis untuk meminimalkan ketergantungan silang dan menyederhanakan penerapan sebanyak mungkin. Saat ini, frontend PRISM menyediakan kemampuan untuk:
+- Muat batas administratif sebagai GeoJSON (`src/config/admin_boundaries.json`)
+- Muat data dasar sebagai JSON, dan tautkan ke batas administratif
+- Menampilkan lapisan WMS dari Geoserver atau titik akhir Open Data Cube, dengan kemampuan pemilihan tanggal
+- Menampilkan tabel CSV di panel sisi kiri
 
-## Configuration
+## Konfigurasi
 
-The configuration is split into four files that you can find in `src/config`:
+Konfigurasi dibagi menjadi empat file yang dapat Anda temukan di `src/config`:
 - i. `prism.json`
 - ii. `layers.json`
 - iii. `tables.json`
 - iv. `baseline.ts`
 
 ### prism.json
-This is the primary configuration file. You can define:
-- The server endpoints
-- Map settings (starting point, zoom)
-- Categories
+Ini adalah file konfigurasi utama. Anda dapat menentukan:
+- endpoint server
+- Pengaturan peta (titik awal, zoom)
+- Kategori
 
-The default categories are `baseline`, `climate`, `impact` and `tables`.
-For each categories, you can define sub categories as "subcategorie_name": [layers], a list of layers from `layers.json`.
+Kategori default adalah `baseline`, `climate`, `impact` dan `tables`.
+Untuk setiap kategori, Anda dapat mendefinisikan subkategori sebagai "nama_subkategori": [layer], daftar layer dari `layers.json`.
 
 ### layers.json
-There are 3 main types of layers:
+Ada 3 jenis utama layer:
 
 #### raster
-These layers are simply processed as raster images from a server.
+Layer ini hanya diproses sebagai gambar raster dari server.
 ```
 "pasture_anomaly": {
     "title": "Pasture anomaly",
@@ -59,8 +59,9 @@ These layers are simply processed as raster images from a server.
 ```
 
 #### baseline
-The layers are obtained by matching data from the `data` field with the administrative boundaries.
-The `data` field should point to a dataset defined in `baseline.ts`
+
+Layer-layer diperoleh dengan mencocokkan data dari bidang `data` dengan batas administratif.
+Kolom `data` harus mengarah ke kumpulan data yang ditentukan dalam `baseline.ts`
 
 ```
 "population_below_poverty": {
@@ -100,49 +101,48 @@ The `data` field should point to a dataset defined in `baseline.ts`
 ```
 
 ### baseline.ts
-This file is used to pre-load datasets and make sure that they are formatted properly. Thanks to TypeScript, this is limitting the potential for mismatch and failed loads.
+File ini digunakan untuk memuat set data sebelumnya dan memastikan bahwa mereka diformat dengan benar. Berkat TypeScript, ini membatasi potensi ketidakcocokan dan pemuatan yang gagal.
 
-## Technical - Packages/Dependencies
+## Teknis - Packages/Dependencies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template with TypeScript.
+Proyek ini di-bootstrap dengan [Create React App](https://github.com/facebook/create-react-app), menggunakan [Redux](https://redux.js.org/) dan [Redux Toolkit](https://redux-toolkit.js.org/) template dengan TypeScript.
 
-- **Styling & UI Library** Use [Material UI](https://material-ui.com/). Note that to use the [styles API](https://material-ui.com/styles/basics/) you can `import @material-ui/core/styles`.
-- **Routing** Uses [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
-- **Mapping** Uses [MapBox](https://docs.mapbox.com/mapbox.js/api/v3.2.1/). To use the app, you will need to create a token and add it as `REACT_APP_MAPBOX_TOKEN` in a `.env` file at the root folder.
-- **Monitoring** Uses [Sentry.io](https://sentry.io). To send monitoring info to Sentry, simply set the `Sentry` url  by adding it as `REACT_SENTRY_URL` in a `.env` file at the root folder.
-- **State Management** Uses [Redux](https://redux.js.org/introduction/getting-started)
-- **Testing** Uses [Jest](https://jestjs.io/) with [Enzyme](https://enzymejs.github.io/enzyme/)
+- **Styling & UI Library** Menggunakan [Material UI](https://material-ui.com/). Perhatikan bahwa untuk menggunakan [styles API](https://material-ui.com/styles/basics/) anda dapat `import @material-ui/core/styles`.
+- **Routing** Menggunakan [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
+- **Mapping** Menggunakan [MapBox](https://docs.mapbox.com/mapbox.js/api/v3.2.1/). Untuk menggunakan aplikasi ini, Anda perlu membuat token dan menambahkannya sebagai `REACT_APP_MAPBOX_TOKEN` di sebuah file `.env` pada folder root.
+- **Monitoring** Menggunakan [Sentry.io](https://sentry.io). Untuk mengirim info pemantauan ke Sentry, cukup atur url `Sentry` dengan menambahkan sebagai `REACT_SENTRY_URL` dalam sebuah file `.env` pada folder root.
+- **State Management** Menggunakan [Redux](https://redux.js.org/introduction/getting-started)
+- **Testing** Menggunakan [Jest](https://jestjs.io/) dengan [Enzyme](https://enzymejs.github.io/enzyme/)
 
-### Available Scripts
+### Skrip yang tersedia
 
-In the project directory, you can run:
+Di direktori proyek, Anda dapat menjalankan:
 
 #### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Menjalankan aplikasi dalam mode pengembangan.<br />
+Buka [http://localhost:3000](http://localhost:3000) untuk menampilkan di browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Halaman akan dimuat ulang jika Anda melakukan pengeditan.<br />
+Anda juga akan melihat lint error di konsol.
 #### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+Meluncurkan test runner dalam mode interactive watch mode.<br />
+Lihat bagian tentang [menjalankan pengujian](https://facebook.github.io/create-react-app/docs/running-tests) untuk informasi selengkapnya.
 #### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Membangun aplikasi untuk produksi ke folder `build`.<br />
+Ini menggabungkan React dengan benar dalam mode produksi dan mengoptimalkan build untuk performa terbaik.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Build diperkecil dan nama file menyertakan hash.<br />
+Aplikasi Anda siap di-deploy!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Lihat bagian tentang [deployment](https://facebook.github.io/create-react-app/docs/deployment) untuk informasi lebih lanjut.
 
 #### `yarn lint`
 
-Runs `eslint` for all the source files. We use a custom Eslint configuration in `./eslintrc` along with [`prettier`](https://prettier.io/) (configured with `./.prettierrc`) to enforce consistency and code quality. If you would like eslint to try to automatically "fix" files if it can, run `yarn lint --fix`.
+Menjalankan `eslint` untuk semua file sumber. Kami menggunakan konfigurasi Eslint khusus di `./eslintrc` bersama dengan [`prettier`](https://prettier.io/) (dikonfigurasi dengan `./.prettierrc`) untuk menegakkan konsistensi dan kualitas kode. Jika Anda ingin eslint mencoba "memperbaiki" file secara otomatis jika bisa, jalankan `yarn lint --fix`.
 
 ### Committing Code
 
-By default, a pre-commit hook is defined to run linting tasks on all _staged_ code before allowing a commit. This occurs using the [lint-staged](https://github.com/okonet/lint-staged) package, and can be configured in `./package.json#lint-staged`. The precommit task can be run manually using `yarn precommit`.
+Secara default, hook pra-komit didefinisikan untuk menjalankan tugas linting pada semua kode _staged_ sebelum mengizinkan komit. Ini terjadi menggunakan paket [lint-staged](https://github.com/okonet/lint-staged), dan dapat dikonfigurasi di `./package.json#lint-staged`. Tugas precommit dapat dijalankan secara manual menggunakan `yarn precommit`.

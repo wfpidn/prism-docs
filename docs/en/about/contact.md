@@ -1,8 +1,8 @@
-# Kontak
+# Contact
 
-Untuk informasi lebih lanjut tentang PRISM, silakan hubungi:
+For further information about PRISM, please contact:
 
-> ### Global
+### Global
 
 Climate and Earth Observation Unit<br>
 Research, Assessments and Monitoring Division<br>
@@ -10,7 +10,7 @@ UN World Food Programme<br>
 Rome, Italy<br>
 
 
-> ### Indonesia
+### Indonesia
 
 Vulnerability Analysis and Mapping Unit<br>
 UN World Food Programme<br>
@@ -21,7 +21,7 @@ F. +62-21-5709001<br>
 E. wfp.indonesia@wfp.org<br>
 
 
-> ### Cambodia
+### Cambodia
 
 Vulnerability Analysis and Mapping Unit<br>
 UN World Food Programme<br>

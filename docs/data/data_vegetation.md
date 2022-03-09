@@ -1,36 +1,36 @@
-# Vegetation
+# Vegetasi
 
-Various satellite data provide vegetation indices as one of the product, Landsat, MODIS Terra Aqua and Sentinel are some of them.
+Berbagai data satelit menyediakan indeks vegetasi sebagai salah satu produknya, Landsat, MODIS Terra Aqua dan Sentinel adalah beberapa di antaranya.
 
-## Vegetation Indices
+### Indeks Vegetasi
 
-Vegetation indices, usually produced on 8 or 16-day and monthly intervals and at multiple spatial resolutions, provide consistent spatial and temporal comparisons of vegetation canopy greenness, a composite property of leaf area, chlorophyll and canopy structure. Two vegetation indices are derived from atmospherically-corrected reflectance in the red, near-infrared, and blue wavebands; the normalized difference vegetation index (NDVI), and the enhanced vegetation index (EVI), which minimizes canopy-soil variations and improves sensitivity over dense vegetation conditions. The two products more effectively characterize the global range of vegetation states and processes.
+Indeks vegetasi, biasanya dihasilkan pada interval 8 atau 16 hari dan bulanan dan pada beberapa resolusi spasial, memberikan perbandingan spasial dan temporal yang konsisten dari kehijauan tajuk vegetasi, properti komposit dari luas daun, klorofil dan struktur kanopi. Dua indeks vegetasi diturunkan dari reflektansi yang dikoreksi secara atmosfer pada pita gelombang merah, inframerah-dekat, dan biru; normalized difference vegetation index (NDVI), dan enhanced vegetation index (EVI), yang meminimalkan variasi kanopi-tanah dan meningkatkan sensitivitas terhadap kondisi vegetasi yang rapat. Kedua produk tersebut secara lebih efektif mencirikan kisaran global keadaan dan proses vegetasi.
 
 ### MODIS
 
-The MOD13A2 Version 6 product provides Vegetation Index (VI) values at a per pixel basis at 1 kilometer (km) spatial resolution. There are two primary vegetation layers. The first is the Normalized Difference Vegetation Index (NDVI), which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The second vegetation layer is the Enhanced Vegetation Index (EVI), which has improved sensitivity over high biomass regions. The algorithm for this product chooses the best available pixel value from all the acquisitions from the 16 day period. The criteria used is low clouds, low view angle and the highest NDVI/EVI value. 
+Produk MOD13A2 Versi 6 memberikan nilai Indeks Vegetasi (VI) pada basis per piksel pada resolusi spasial 1 kilometer (km). Ada dua lapisan vegetasi primer. Yang pertama adalah Normalized Difference Vegetation Index (NDVI), yang dirujuk sebagai indeks kontinuitas dari NDVI yang diturunkan dari National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR). Lapisan vegetasi kedua adalah Enhanced Vegetation Index (EVI), yang telah meningkatkan sensitivitas di daerah dengan biomassa tinggi. Algoritme untuk produk ini memilih nilai piksel terbaik yang tersedia dari semua akuisisi dari periode 16 hari. Kriteria yang digunakan adalah awan rendah, sudut pandang rendah dan nilai NDVI/EVI tertinggi.
 
-#### About the data
+#### Tentang data
 
-| Characteristic  | Description  |
+| Karakteristik  | Deskripsi  |
 |---|---|
-| Function  | Displays 16-days vegetation indices data  |
-| Variable  | NDVI  |
-| Geographic coverage  | Global |
-| Spatial resolution  | 1 km  |
-| Temporal resolution  | 16-days  |
+| Fungsi  | Menampilkan data indeks vegetasi 16 hari  |
+| Variabel  | NDVI  |
+| Cakupan Geografis  | Global |
+| Resolusi Spasial  | 1 km  |
+| Resolusi sementara  | 16-hari  |
 | Format  | HDF-EOS  |
-| Unit  | n/a, Scale factor 0.0001  |
-| Source  | https://e4ftl01.cr.usgs.gov/MOLT/MOD13A2.006/  |
-| Reference  | https://lpdaac.usgs.gov/products/mod13a2v006/  |
+| Unit  | n/a, faktor skala 0.0001  |
+| Sumber  | https://e4ftl01.cr.usgs.gov/MOLT/MOD13A2.006/  |
+| Referensi  | https://lpdaac.usgs.gov/products/mod13a2v006/  |
 
-#### Symbology
+#### Simbologi
 
-?> The threshold and the symbology for the `16-days` NDVI can follow below colorcodes and image.
+?> Ambang batas dan simbologi untuk NDVI `16-hari` dapat mengikuti kode warna dan gambar di bawah ini.
 
 | Class  | Hex  | RGB  |
 |---|---|---|
-| 0 and below  | `#002596` ![#002596](https://via.placeholder.com/15/002596/000000?text=+) | rgb(0, 37, 150)  |
+| 0 ke bawah  | `#002596` ![#002596](https://via.placeholder.com/15/002596/000000?text=+) | rgb(0, 37, 150)  |
 | 0 to 0.05  | `#752a27` ![#752a27](https://via.placeholder.com/15/752a27/000000?text=+)  | rgb(117, 42, 39)  |
 | 0.06 to 0.10  | `#b4672a` ![#b4672a](https://via.placeholder.com/15/b4672a/000000?text=+)  | rgb(180, 103, 42)  |
 | 0.11 to 0.15  | `#f3a63b` ![#f3a63b](https://via.placeholder.com/15/f3a63b/000000?text=+)  | rgb(243, 166, 59)  |
